@@ -14,9 +14,8 @@ RUN <<EOF
   set -euo pipefail
   apt-get update -y
   apt-get upgrade -y --no-install-recommends
-  docker-php-ext-install pdo_mysql
-  pecl install apcu redis
-  docker-php-ext-enable apcu redis
+  pecl install pdo_oci apcu redis
+  docker-php-ext-enable pdo_oci apcu redis
   apt-get autoremove -y
   apt-get autoclean -y
   apt-get clean -y

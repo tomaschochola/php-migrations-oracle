@@ -9,7 +9,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "TomasChochola\\Migrations\\Mysql\\": "./src"
+      "TomasChochola\\Migrations\\Oracle\\": "./src"
     }
   },
   "autoload-dev": {
@@ -26,24 +26,24 @@
     "process-timeout": 0,
     "sort-packages": true
   },
-  "description": "tomaschochola/php-migrations-mysql",
+  "description": "tomaschochola/php-migrations-oracle",
   "funding": [
     {
       "type": "github",
       "url": "https://github.com/sponsors/tomaschochola"
     }
   ],
-  "homepage": "https://github.com/tomaschochola/php-migrations-mysql",
+  "homepage": "https://github.com/tomaschochola/php-migrations-oracle",
   "keywords": [
     "tomaschochola",
     "TomasChochola",
     "Tomas Chochola",
     "Tomáš Chochola",
-    "php-migrations-mysql"
+    "php-migrations-oracle"
   ],
   "license": "CC-BY-ND-4.0",
   "minimum-stability": "dev",
-  "name": "tomaschochola/php-migrations-mysql",
+  "name": "tomaschochola/php-migrations-oracle",
   "prefer-stable": true,
   "readme": "./README.md",
   "repositories": [
@@ -85,10 +85,10 @@
     "tomaschochola/tooling-phpstan": "^1.0@dev"
   },
   "support": {
-    "docs": "https://github.com/tomaschochola/php-migrations-mysql",
+    "docs": "https://github.com/tomaschochola/php-migrations-oracle",
     "email": "tomaschochola@tomaschochola.cz",
-    "issues": "https://github.com/tomaschochola/php-migrations-mysql/issues",
-    "source": "https://github.com/tomaschochola/php-migrations-mysql.git"
+    "issues": "https://github.com/tomaschochola/php-migrations-oracle/issues",
+    "source": "https://github.com/tomaschochola/php-migrations-oracle.git"
   },
   "type": "library"
 }

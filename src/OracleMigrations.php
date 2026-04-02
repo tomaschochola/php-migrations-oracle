@@ -13,7 +13,7 @@
 
 declare(strict_types=1);
 
-namespace TomasChochola\Migrations\Mysql;
+namespace TomasChochola\Migrations\Oracle;
 
 use NoDiscard;
 use Override;
@@ -24,7 +24,7 @@ use TomasChochola\Pdo\QueryInterface;
 /**
  * @no-named-arguments
  */
-readonly class MysqlMigrations implements MigrationsInterface
+readonly class OracleMigrations implements MigrationsInterface
 {
     private readonly LoggerInterface $logger;
 
@@ -47,12 +47,23 @@ readonly class MysqlMigrations implements MigrationsInterface
     public function init(): void
     {
         $sql = <<<'SQL'
-            CREATE TABLE IF NOT EXISTS `migrations` (
-                `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                `selector` VARCHAR(255) NOT NULL UNIQUE,
-                `created_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-                `updated_at` DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+            DECLARE
+                count_number NUMBER;
+            BEGIN
+                SELECT COUNT(*)
+                INTO count_number
+                FROM user_tables
+                WHERE table_name = 'MIGRATIONS';
+
+                IF count_number = 0 THEN
+                    EXECUTE IMMEDIATE '
+                        CREATE TABLE migrations (
+                            selector VARCHAR2(255 CHAR) PRIMARY KEY,
+                            created_at TIMESTAMP(6) DEFAULT SYSTIMESTAMP NOT NULL
+                        )
+                    ';
+                END IF;
+            END;
             SQL;
 
         $this->logger->notice('migrator.sql', ['selector' => 'migrations', 'sql' => $sql]);
