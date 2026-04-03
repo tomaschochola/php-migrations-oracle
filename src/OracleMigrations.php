@@ -1,34 +1,65 @@
 <?php
 
+/**
+ * @author Tomáš Chochola <tomaschochola@tomaschochola.cz>
+ * @copyright © 2026 Tomáš Chochola <tomaschochola@tomaschochola.cz>
+ *
+ * @license CC-BY-ND-4.0
+ *
+ * @see {@link https://creativecommons.org/licenses/by-nd/4.0/} License
+ * @see {@link https://github.com/tomaschochola} GitHub Profile
+ * @see {@link https://github.com/sponsors/tomaschochola} GitHub Sponsors
+ */
+
 declare(strict_types=1);
 
-namespace TomasChochola\Migrations\Oci;
+namespace TomasChochola\Migrations\Oracle;
 
 use NoDiscard;
 use Override;
 use Psr\Log\LoggerInterface;
-use TomasChochola\Connection\Oci\OciConnection;
+use TomasChochola\Connection\Oracle\OracleConnection;
 use TomasChochola\Migrations\MigrationsInterface;
 use UnexpectedValueException;
 
 use function is_string;
 
-readonly class OciMigrations implements MigrationsInterface
+/**
+ * @no-named-arguments
+ */
+readonly class OracleMigrations implements MigrationsInterface
 {
     private readonly LoggerInterface $logger;
-    private readonly OciConnection $oracle;
 
-    public function __construct(OciConnection $oracle, LoggerInterface $logger)
+    private readonly OracleConnection $oracle;
+
+    public function __construct(OracleConnection $oracle, LoggerInterface $logger)
     {
         $this->oracle = $oracle;
         $this->logger = $logger;
+    }
+
+    #[Override]
+    public function end(): void {}
+
+    #[Override]
+    public function execute(string $sql): void
+    {
+        $statement = $this->oracle->parse($sql);
+
+        $statement->execute();
     }
 
     #[NoDiscard]
     #[Override]
     public function has(string $selector): bool
     {
-        $row = $this->oracle->statement('SELECT COUNT(*) AS COUNT_NUMBER FROM migrations WHERE selector = :selector')->bindParams(['selector' => $selector])->execute()->fetchAssoc();
+        $statement = $this->oracle->parse('SELECT COUNT(*) AS COUNT_NUMBER FROM migrations WHERE selector = :selector');
+
+        $statement->bindByName('selector', $selector);
+        $statement->execute();
+
+        $row = $statement->fetchAssoc();
 
         if ($row === null) {
             throw new UnexpectedValueException('$row');
@@ -44,23 +75,18 @@ readonly class OciMigrations implements MigrationsInterface
     }
 
     #[Override]
-    public function end(): void
-    {
-    }
-
-    #[Override]
-    public function execute(string $sql): void
-    {
-        $this->oracle->statement($sql)->execute();
-    }
-
-    #[Override]
     public function mark(string $selector): void
     {
-        $sql = 'INSERT INTO migrations (selector) VALUES (:selector)';
+        $sql = <<<'SQL'
+            INSERT INTO migrations (selector) VALUES (:selector)
+            SQL;
 
         $this->logger->notice('migrator.sql', ['selector' => $selector, 'sql' => $sql]);
-        $this->oracle->statement($sql)->bindParams(['selector' => $selector])->execute();
+
+        $statement = $this->oracle->parse($sql);
+
+        $statement->bindByName('selector', $selector);
+        $statement->execute();
     }
 
     #[Override]
@@ -87,6 +113,9 @@ readonly class OciMigrations implements MigrationsInterface
             SQL;
 
         $this->logger->notice('migrator.sql', ['selector' => 'migrations', 'sql' => $sql]);
-        $this->oracle->statement($sql)->execute();
+
+        $statement = $this->oracle->parse($sql);
+
+        $statement->execute();
     }
 }

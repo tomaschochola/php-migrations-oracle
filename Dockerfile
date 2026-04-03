@@ -6,17 +6,35 @@ ARG COMPOSER_VERSION=2
 FROM composer:2 AS versionedcomposer
 FROM php:8.5-fpm-trixie AS versionedphp
 
+FROM busybox:latest AS instantclient
+ADD --checksum=sha256:d6715e404a35b3a538280b78df6f7ee59da83a9d36b596218fd264051db977f3 https://download.oracle.com/otn_software/linux/instantclient/2326100/instantclient-basic-linux.x64-23.26.1.0.0.zip /tmp/instantclient-basic.zip
+ADD --checksum=sha256:2d7ef8ec14c3e0240221620c12ce94d047092c9065171db17778cce7b1fdd5db https://download.oracle.com/otn_software/linux/instantclient/2326100/instantclient-sdk-linux.x64-23.26.1.0.0.zip /tmp/instantclient-sdk.zip
+RUN <<EOF
+  set -eu
+  mkdir -p /opt/oracle
+  unzip -oq /tmp/instantclient-basic.zip -d /opt/oracle
+  unzip -oq /tmp/instantclient-sdk.zip -d /opt/oracle
+  mv /opt/oracle/instantclient_23_26 /opt/oracle/instantclient
+EOF
+
 FROM versionedphp AS base
 WORKDIR /var/www/html
 ENV APP_ENV=production
 ENV NODE_ENV=production
+COPY --from=instantclient /opt/oracle/instantclient /opt/oracle/instantclient
 RUN <<EOF
   set -euo pipefail
   apt-get update -y
   apt-get upgrade -y --no-install-recommends
+  apt-get install -y --no-install-recommends libaio1t64
+  ln -sfn /usr/lib/x86_64-linux-gnu/libaio.so.1t64 /usr/lib/x86_64-linux-gnu/libaio.so.1
+  echo /opt/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf
+  ldconfig
   pecl channel-update pecl.php.net
+  printf 'instantclient,/opt/oracle/instantclient\n' | pecl install oci8
   pecl install apcu redis
-  docker-php-ext-enable apcu redis
+  docker-php-ext-enable oci8 apcu redis
+  rm -rf /opt/oracle/instantclient/sdk /tmp/pear
   apt-get autoremove -y
   apt-get autoclean -y
   apt-get clean -y
