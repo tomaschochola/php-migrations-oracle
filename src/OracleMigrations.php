@@ -13,13 +13,13 @@
 
 declare(strict_types=1);
 
-namespace TomasChochola\Migrations\Oracle;
+namespace TomasChochola\Migrations\Oracle\Database;
 
 use NoDiscard;
 use Override;
 use Psr\Log\LoggerInterface;
-use TomasChochola\Connection\Oracle\OracleConnection;
 use TomasChochola\Migrations\MigrationsInterface;
+use TomasChochola\Oracle\Database\OracleConnection;
 use UnexpectedValueException;
 
 use function is_string;
