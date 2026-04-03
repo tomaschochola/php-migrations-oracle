@@ -1,78 +1,29 @@
 {
-  "authors": [
-    {
-      "email": "tomaschochola@tomaschochola.cz",
-      "homepage": "https://github.com/tomaschochola",
-      "name": "Tomáš Chochola",
-      "role": "Author"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "TomasChochola\\Migrations\\Oracle\\": "./src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "./tests"
-    }
-  },
-  "config": {
-    "allow-plugins": false,
-    "audit": {
-      "abandoned": "fail"
-    },
-    "platform-check": true,
-    "process-timeout": 0,
-    "sort-packages": true
-  },
-  "description": "tomaschochola/php-migrations-oracle",
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/tomaschochola"
-    }
-  ],
-  "homepage": "https://github.com/tomaschochola/php-migrations-oracle",
-  "keywords": [
-    "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "php-migrations-oracle"
-  ],
+  "authors": [{"email": "tomaschochola@tomaschochola.cz", "homepage": "https://github.com/tomaschochola", "name": "Tomáš Chochola", "role": "Author"}],
+  "autoload": {"psr-4": {"TomasChochola\\Migrations\\Oci\\": "./src"}},
+  "autoload-dev": {"psr-4": {"Tests\\": "./tests"}},
+  "config": {"allow-plugins": false, "audit": {"abandoned": "fail"}, "platform-check": true, "process-timeout": 0, "sort-packages": true},
+  "description": "tomaschochola/php-migrations-oci",
+  "funding": [{"type": "github", "url": "https://github.com/sponsors/tomaschochola"}],
+  "homepage": "https://github.com/tomaschochola/php-migrations-oci",
+  "keywords": ["tomaschochola", "TomasChochola", "Tomas Chochola", "Tomáš Chochola", "php-migrations-oci"],
   "license": "CC-BY-ND-4.0",
   "minimum-stability": "dev",
-  "name": "tomaschochola/php-migrations-oracle",
+  "name": "tomaschochola/php-migrations-oci",
   "prefer-stable": true,
   "readme": "./README.md",
   "repositories": [
-    {
-      "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/tooling-phpstan.git"
-    },
-    {
-      "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"
-    },
-    {
-      "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/php-database.git"
-    },
-    {
-      "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/php-migrations.git"
-    }
+    {"no-api": true, "type": "git", "url": "https://github.com/tomaschochola/tooling-phpstan.git"},
+    {"no-api": true, "type": "git", "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"},
+    {"no-api": true, "type": "git", "url": "https://github.com/tomaschochola/php-connection-oci.git"},
+    {"no-api": true, "type": "git", "url": "https://github.com/tomaschochola/php-migrations.git"}
   ],
   "require": {
+    "ext-oci8": "*",
     "php": "^8.5.0",
     "psr/log": "^3.0",
     "tomaschochola/php-migrations": "^1.0@dev",
-    "tomaschochola/php-database": "^1.0@dev"
+    "tomaschochola/php-connection-oci": "^1.0@dev"
   },
   "require-dev": {
     "ext-intl": "*",
@@ -84,11 +35,6 @@
     "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
     "tomaschochola/tooling-phpstan": "^1.0@dev"
   },
-  "support": {
-    "docs": "https://github.com/tomaschochola/php-migrations-oracle",
-    "email": "tomaschochola@tomaschochola.cz",
-    "issues": "https://github.com/tomaschochola/php-migrations-oracle/issues",
-    "source": "https://github.com/tomaschochola/php-migrations-oracle.git"
-  },
+  "support": {"docs": "https://github.com/tomaschochola/php-migrations-oci", "email": "tomaschochola@tomaschochola.cz", "issues": "https://github.com/tomaschochola/php-migrations-oci/issues", "source": "https://github.com/tomaschochola/php-migrations-oci.git"},
   "type": "library"
 }
