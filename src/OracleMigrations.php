@@ -18,6 +18,7 @@ namespace TomasChochola\Migrations\Oracle\Database;
 use NoDiscard;
 use Override;
 use Psr\Log\LoggerInterface;
+use Stringable;
 use TomasChochola\Migrations\MigrationsInterface;
 use TomasChochola\Oracle\Database\OracleConnection;
 use UnexpectedValueException;
@@ -43,9 +44,9 @@ readonly class OracleMigrations implements MigrationsInterface
     public function end(): void {}
 
     #[Override]
-    public function execute(string $sql): void
+    public function execute(string|Stringable $sql): void
     {
-        $statement = $this->oracle->parse($sql);
+        $statement = $this->oracle->parse((string) $sql);
 
         $statement->execute();
     }
