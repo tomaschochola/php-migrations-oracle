@@ -44,7 +44,7 @@ readonly class OracleMigrations implements MigrationsInterface
     public function end(): void {}
 
     #[Override]
-    public function execute(string|Stringable $sql): void
+    public function execute(Stringable|string $sql): void
     {
         $statement = $this->oracle->parse((string) $sql);
 
