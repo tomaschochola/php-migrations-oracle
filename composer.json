@@ -80,7 +80,7 @@
     "ext-pcntl": "*",
     "ext-xdebug": "*",
     "ext-zip": "*",
-    "phpunit/phpunit": "^12.5",
+    "phpunit/phpunit": "^13.0",
     "roave/security-advisories": "dev-latest",
     "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
     "tomaschochola/tooling-phpstan": "^1.0@dev"
