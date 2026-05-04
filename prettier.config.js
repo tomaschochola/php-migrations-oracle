@@ -14,5 +14,5 @@ import { Prettier } from '@tomaschochola/tooling-prettier';
 
 // eslint-disable-next-line no-restricted-exports
 export default new Prettier()
-  .xml()
-  .build();
+  .pluginXml()
+  .buildConfig();

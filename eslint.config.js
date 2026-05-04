@@ -10,18 +10,10 @@
  * @see {@link https://github.com/sponsors/tomaschochola} GitHub Sponsors
  */
 
-import { Eslint } from '@tomaschochola/tooling-eslint';
-import globals from 'globals';
+import { ESLint } from '@tomaschochola/tooling-eslint';
 
 // eslint-disable-next-line no-restricted-exports
-export default new Eslint()
-  .globals({
-    ...globals.node,
-    ...globals.es2024,
-  })
-  .ignores()
-  .ignores(['node_modules', 'vendor', '.phpunit.cache', '.phpunit.coverage', '.phpunit.result.cache', '.php-cs-fixer.cache'])
-  .recommended()
-  .stylistic()
-  .sonarjs()
-  .build();
+export default new ESLint()
+  .presetNode({ presetDefaultsOptions: { configNodeModulesIgnores: false } })
+  .configIgnores(['node_modules', 'vendor', '.phpunit.cache', '.phpunit.coverage', '.phpunit.result.cache', '.php-cs-fixer.cache'])
+  .buildConfig();
