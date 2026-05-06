@@ -125,19 +125,11 @@ composer_update: ./composer.json
 .PHONY: postcreate
 postcreate: install
 
-.PHONY: password
-password:
-	@tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 32
-
-.PHONY: secret
-secret:
-	@tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c 64
-
 .PHONY: devcontainer
 devcontainer:
 	devcontainer up
 	devcontainer exec /bin/bash
-	docker compose -f ./docker-compose-devcontainer.yml down --remove-orphans --rmi=local
+	docker compose -f ./docker-compose-devcontainer.yml down --remove-orphans
 
 # Dependencies
 ./.phpunit.coverage/html:

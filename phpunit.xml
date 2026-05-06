@@ -37,13 +37,22 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
 >
-  <coverage disableCodeCoverageIgnore="true" ignoreDeprecatedCodeUnits="true" includeUncoveredFiles="true" pathCoverage="true">
+  <coverage
+    disableCodeCoverageIgnore="true"
+    ignoreDeprecatedCodeUnits="true"
+    includeUncoveredFiles="true"
+    pathCoverage="true"
+  >
     <report>
       <html outputDirectory="./.phpunit.coverage/html" />
     </report>
   </coverage>
   <php>
-    <env name="APP_ENV" value="phpunit" force="true" />
+    <env
+      name="APP_ENV"
+      value="phpunit"
+      force="true"
+    />
   </php>
   <source
     ignoreDirectDeprecations="false"
