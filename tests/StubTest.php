@@ -27,7 +27,7 @@ use PHPUnit\Framework\Attributes\Test;
  */
 #[CoversNothing]
 #[Small]
-final class StubTest extends TestCase
+class StubTest extends TestCase
 {
     #[DoesNotPerformAssertions]
     #[Test]

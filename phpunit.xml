@@ -8,7 +8,9 @@
   beStrictAboutTestsThatDoNotTestAnything="true"
   bootstrap="./vendor/autoload.php"
   cacheDirectory="./.phpunit.cache"
+  cacheResult="false"
   controlGarbageCollector="true"
+  defaultTestSuite="tests"
   defaultTimeLimit="1"
   displayDetailsOnAllIssues="true"
   displayDetailsOnIncompleteTests="true"
@@ -20,7 +22,7 @@
   displayDetailsOnTestsThatTriggerNotices="true"
   displayDetailsOnTestsThatTriggerWarnings="true"
   enforceTimeLimit="true"
-  executionOrder="depends,defects"
+  executionOrder="depends"
   failOnAllIssues="true"
   failOnDeprecation="true"
   failOnEmptyTestSuite="true"
@@ -31,15 +33,19 @@
   failOnRisky="true"
   failOnSkipped="true"
   failOnWarning="true"
+  numberOfTestsBeforeGarbageCollection="1"
   processIsolation="true"
   requireCoverageMetadata="true"
   requireSealedMockObjects="true"
+  timeoutForLargeTests="60"
+  timeoutForMediumTests="10"
+  timeoutForSmallTests="1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
 >
   <coverage
     disableCodeCoverageIgnore="true"
-    ignoreDeprecatedCodeUnits="true"
+    ignoreDeprecatedCodeUnits="false"
     includeUncoveredFiles="true"
     pathCoverage="true"
   >
@@ -48,9 +54,18 @@
     </report>
   </coverage>
   <php>
+    <ini
+      name="date.timezone"
+      value="UTC"
+    />
     <env
       name="APP_ENV"
       value="phpunit"
+      force="true"
+    />
+    <env
+      name="TZ"
+      value="UTC"
       force="true"
     />
   </php>
@@ -70,6 +85,7 @@
   >
     <include>
       <directory>./src</directory>
+      <directory includeInCodeCoverage="false">./tests</directory>
     </include>
   </source>
   <testsuites>
