@@ -30,9 +30,9 @@ use function is_string;
  */
 readonly class OracleMigrations implements MigrationsInterface
 {
-    private readonly LoggerInterface $logger;
+    private LoggerInterface $logger;
 
-    private readonly OracleConnection $oracle;
+    private OracleConnection $oracle;
 
     public function __construct(OracleConnection $oracle, LoggerInterface $logger)
     {
@@ -40,19 +40,21 @@ readonly class OracleMigrations implements MigrationsInterface
         $this->logger = $logger;
     }
 
-    #[Override]
-    public function end(): void {}
+    #[Override()]
+    public function end(): void
+    {
+    }
 
-    #[Override]
-    public function execute(Stringable|string $sql): void
+    #[Override()]
+    public function execute(Stringable | string $sql): void
     {
         $statement = $this->oracle->parse((string) $sql);
 
         $statement->execute();
     }
 
-    #[NoDiscard]
-    #[Override]
+    #[NoDiscard()]
+    #[Override()]
     public function has(string $selector): bool
     {
         $statement = $this->oracle->parse('SELECT COUNT(*) AS COUNT_NUMBER FROM migrations WHERE selector = :selector');
@@ -75,7 +77,7 @@ readonly class OracleMigrations implements MigrationsInterface
         return $count !== '0';
     }
 
-    #[Override]
+    #[Override()]
     public function mark(string $selector): void
     {
         $sql = <<<'SQL'
@@ -90,7 +92,7 @@ readonly class OracleMigrations implements MigrationsInterface
         $statement->execute();
     }
 
-    #[Override]
+    #[Override()]
     public function start(): void
     {
         $sql = <<<'SQL'

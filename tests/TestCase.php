@@ -22,4 +22,6 @@ use PHPUnit\Framework\TestCase as PHPUnitFrameworkTestCase;
  *
  * @no-named-arguments
  */
-abstract class TestCase extends PHPUnitFrameworkTestCase {}
+abstract class TestCase extends PHPUnitFrameworkTestCase
+{
+}
