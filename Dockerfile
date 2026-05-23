@@ -1,12 +1,9 @@
 # syntax=docker/dockerfile:1
 
-ARG PHP_VERSION=8.5-fpm-trixie
-ARG COMPOSER_VERSION=2
+FROM docker.io/library/composer:2 AS versionedcomposer
+FROM docker.io/library/php:8.5-fpm-trixie AS versionedphp
 
-FROM composer:2 AS versionedcomposer
-FROM php:8.5-fpm-trixie AS versionedphp
-
-FROM busybox:latest AS instantclient
+FROM docker.io/library/busybox:latest AS instantclient
 ADD --checksum=sha256:d6715e404a35b3a538280b78df6f7ee59da83a9d36b596218fd264051db977f3 https://download.oracle.com/otn_software/linux/instantclient/2326100/instantclient-basic-linux.x64-23.26.1.0.0.zip /tmp/instantclient-basic.zip
 ADD --checksum=sha256:2d7ef8ec14c3e0240221620c12ce94d047092c9065171db17778cce7b1fdd5db https://download.oracle.com/otn_software/linux/instantclient/2326100/instantclient-sdk-linux.x64-23.26.1.0.0.zip /tmp/instantclient-sdk.zip
 RUN <<EOF
@@ -61,6 +58,7 @@ RUN <<EOF
   mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
   groupadd devcontainer
   useradd -s /bin/bash --gid devcontainer -m devcontainer
+  install -d -o devcontainer -g devcontainer /home/devcontainer/.composer/cache /home/devcontainer/.npm
   wget https://nodejs.org/dist/v24.14.0/node-v24.14.0-linux-x64.tar.xz -O node.tar.xz
   tar -xf node.tar.xz -C /usr/local --strip-components=1
   rm node.tar.xz

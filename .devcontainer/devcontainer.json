@@ -16,7 +16,7 @@
     }
   },
   "dockerComposeFile": ["../docker-compose-devcontainer.yml"],
-  "init": true,
+  "initializeCommand": "make precreate",
   "postCreateCommand": "make postcreate",
   "remoteUser": "devcontainer",
   "service": "devcontainer",

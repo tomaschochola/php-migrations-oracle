@@ -122,11 +122,16 @@ composer_update: ./composer.json
 	composer update --no-plugins --no-scripts --no-autoloader --with-all-dependencies
 	composer dump-autoload --no-plugins --no-scripts --optimize --strict-psr --strict-ambiguous
 
+.PHONY: precreate
+precreate:
+	docker volume create tomaschochola-composer-cache >/dev/null
+	docker volume create tomaschochola-npm-cache >/dev/null
+
 .PHONY: postcreate
 postcreate: install
 
 .PHONY: devcontainer
-devcontainer:
+devcontainer: precreate
 	devcontainer up
 	devcontainer exec /bin/bash || true
 	docker ps -q --filter "label=devcontainer.local_folder=$${PWD}" | xargs -r docker stop

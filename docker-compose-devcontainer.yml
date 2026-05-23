@@ -1,9 +1,6 @@
 networks:
   devcontainer:
     internal: false
-volumes:
-  composer-cache:
-  npm-cache:
 services:
   devcontainer:
     build:
@@ -14,8 +11,9 @@ services:
     environment:
       APP_ENV: 'local'
       COMPOSER_CACHE_DIR: '/home/devcontainer/.composer/cache'
-      NPM_CONFIG_CACHE: '/home/devcontainer/.npm'
       NODE_ENV: 'development'
+      NPM_CONFIG_CACHE: '/home/devcontainer/.npm'
+    init: true
     networks:
       - 'devcontainer'
     user: 'devcontainer:devcontainer'
@@ -23,3 +21,10 @@ services:
       - './:/var/www/html'
       - 'composer-cache:/home/devcontainer/.composer/cache'
       - 'npm-cache:/home/devcontainer/.npm'
+volumes:
+  composer-cache:
+    external: true
+    name: 'tomaschochola-composer-cache'
+  npm-cache:
+    external: true
+    name: 'tomaschochola-npm-cache'
