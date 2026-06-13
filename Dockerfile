@@ -42,7 +42,6 @@ COPY --from=versionedcomposer /usr/bin/composer /usr/bin/composer
 FROM base AS devcontainer
 ENV APP_ENV=local
 ENV NODE_ENV=development
-ADD --chmod=755 https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 /usr/local/bin/yq
 RUN <<EOF
   set -euo pipefail
   apt-get update -y
