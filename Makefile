@@ -12,6 +12,7 @@ MAKEFLAGS += --no-builtin-variables
 
 .DELETE_ON_ERROR:
 .SUFFIXES:
+.NOTPARALLEL:
 
 # Default goal
 
