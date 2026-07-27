@@ -119,7 +119,6 @@ prettier_fix: ./node_modules ./package.json ./package-lock.json ./prettier.confi
 php_cs_fixer_fix: ./vendor ./composer.json ./composer.lock ./.php-cs-fixer.php
 	composer exec --no-plugins --no-scripts -- php-cs-fixer fix
 
-
 .PHONY: eslint_check
 eslint_check: ./node_modules ./package.json ./package-lock.json ./eslint.config.js
 	npm exec --ignore-scripts -- eslint --concurrency=auto .
