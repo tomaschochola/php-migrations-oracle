@@ -20,6 +20,10 @@
     "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#1.x",
     "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#1.x"
   },
+  "engines": {
+    "node": ">=24.11.0 <25.0.0",
+    "npm": ">=11.0.0 <12.0.0"
+  },
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/tomaschochola"
@@ -34,7 +38,10 @@
   ],
   "license": "CC-BY-ND-4.0",
   "name": "@tomaschochola/php-migrations-oracle-database",
+  "packageManager": "npm@11.16.0",
+  "private": true,
   "repository": "github:tomaschochola/php-migrations-oracle-database",
   "sideEffects": false,
-  "type": "module"
+  "type": "module",
+  "version": "0.0.0"
 }
