@@ -1,3 +1,4 @@
+name: 'php-migrations-oracle-database-devcontainer'
 networks:
   devcontainer:
     internal: false
