@@ -45,7 +45,6 @@
   "minimum-stability": "dev",
   "name": "tomaschochola/php-migrations-oracle-database",
   "prefer-stable": true,
-  "readme": "./README.md",
   "repositories": [
     {
       "no-api": true,

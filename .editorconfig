@@ -9,11 +9,11 @@ insert_final_newline = true
 max_line_length = 200
 trim_trailing_whitespace = true
 
-[*.md]
-trim_trailing_whitespace = false
-
 [Makefile]
 indent_style = tab
 
 [*.php]
 indent_size = 4
+
+[*.ini]
+max_line_length = off

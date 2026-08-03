@@ -2,23 +2,29 @@
 
 ## Tomáš Chochola
 
-**Solution Architect and Lead Engineer**
+### Enterprise Architect
 
-Tomáš Chochola serves as the principal architect and creator of this software ecosystem. His professional background encompasses executive technical leadership and high level enterprise architecture where precision and long term stability are paramount.
+Tomáš Chochola is the principal architect and original author of this project. He designs and evolves software-intensive systems for civic technology, fintech, banking, corporate, and broader enterprise environments.
 
-The engineering philosophy applied here draws directly from the foundational era of computer science. It respects the discipline required by low level environments where resource constraints demanded absolute understanding of the machine. This rigor is transposed into modern development stacks ranging from system level programming in Rust and Go to complex distributed systems in PHP and TypeScript.
+His work connects enterprise and solution architecture with hands-on full-stack engineering. It covers domain and application architecture, backend and frontend systems, APIs and integration, DevSecOps, cloud and platform engineering, microservices, containerization, developer experience, engineering standards, code quality, and automated assurance.
 
-Every component in this repository is crafted with an uncompromising focus on performance and correctness. The code rejects the modern tendency to rely on abstraction layers that hide complexity and introduce overhead. Instead it enforces explicit data flow and strict typing to guarantee deterministic behavior under any load.
+### Professional Focus
 
-This work targets environments where quality and maintainability are the only metrics that matter. It is designed for engineers who require absolute control over their infrastructure and possess the expertise to manage strictly typed and highly optimized systems.
+- Enterprise and solution architecture
+- Civic technology, fintech, banking, and corporate systems
+- Full-stack application and platform engineering
+- DevSecOps, cloud infrastructure, microservices, and containerization
+- Developer tooling, code quality, coding standards, and delivery automation
+- Security, reliability, performance, observability, and long-term maintainability
+
+### Engineering Approach
+
+Tomáš favors explicit contracts, secure defaults, standards-based interoperability, disciplined automation, and architectures that remain understandable under operational pressure. He treats architecture as an engineering responsibility carried through system boundaries, code, delivery workflows, verification, operations, and continuous evolution.
+
+This repository is part of a broader open-source ecosystem of reusable libraries, templates, and tooling for teams that value consistent engineering practices and durable software.
 
 ### Contact
 
-**Email**<br />
-tomaschochola@tomaschochola.cz
-
-**GitHub Profile**<br />
-https://github.com/tomaschochola
-
-**Sponsorship**<br />
-https://github.com/sponsors/tomaschochola
+- Email: [tomaschochola@tomaschochola.cz](mailto:tomaschochola@tomaschochola.cz)
+- GitHub: [tomaschochola](https://github.com/tomaschochola)
+- Sponsorship: [GitHub Sponsors](https://github.com/sponsors/tomaschochola)
