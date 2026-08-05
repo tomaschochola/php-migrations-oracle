@@ -1,4 +1,4 @@
 * text=auto eol=lf
 
-composer.lock -merge
-package-lock.json -merge
+composer.lock -merge linguist-generated
+package-lock.json -merge linguist-generated

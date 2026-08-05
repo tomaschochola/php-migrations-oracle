@@ -15,10 +15,10 @@
       "url": "https://github.com/tomaschochola"
     }
   ],
-  "description": "@tomaschochola/php-migrations-oracle-database",
+  "description": "Oracle Database migration storage and execution for tomaschochola/php-migrations.",
   "devDependencies": {
-    "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#1.x",
-    "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#1.x",
+    "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#2.x",
+    "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#2.x",
     "@tomaschochola/tooling-trimmer": "github:tomaschochola/tooling-trimmer#2.x"
   },
   "funding": {
@@ -28,16 +28,18 @@
   "homepage": "https://github.com/tomaschochola/php-migrations-oracle-database",
   "keywords": [
     "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "php-migrations-oracle-database"
+    "database",
+    "migration",
+    "oracle",
+    "schema"
   ],
   "license": "CC-BY-ND-4.0",
   "name": "@tomaschochola/php-migrations-oracle-database",
   "private": true,
-  "repository": "github:tomaschochola/php-migrations-oracle-database",
-  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomaschochola/php-migrations-oracle-database.git"
+  },
   "type": "module",
   "version": "0.0.0"
 }

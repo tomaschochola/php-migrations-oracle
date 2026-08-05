@@ -1,30 +1,8 @@
-# generic
-.DS_Store
-.fleet
-.idea
-.vscode
-.zed
-.antigravitycli
-
 # node
-/node_modules
 /package-lock.json
 
 # composer
 /composer.lock
-/vendor
-
-# environment files and secrets
-/.env
-/.secrets
-
-# phpunit
-/.phpunit.cache
-/.phpunit.coverage
-/.phpunit.result.cache
-
-# php-cs-fixer
-/.php-cs-fixer.cache
 
 # svg
 *.svg

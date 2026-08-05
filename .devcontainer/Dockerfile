@@ -28,7 +28,7 @@ RUN mkdir -p /opt/oracle \
     && mv /opt/oracle/instantclient_23_26 /opt/oracle/instantclient
 
 FROM docker.io/library/composer:2@sha256:4d71c3c2109c61d5415544264b59ad4087e4c5b7244481723664138fd36d5040 AS versionedcomposer
-FROM docker.io/library/node:24-trixie@sha256:dfa43abae25030f5456007944f725379d1f5be4bb723bd501ac39ac72ffa5474 AS versionednode
+FROM docker.io/library/node:24-trixie@sha256:ef91212c27702eab90248892b1ac837ba3e903f78385770bd11f7c460e28eaf7 AS versionednode
 FROM ghcr.io/php/pie:1.4.5-bin@sha256:14bc484d9be70396e31b0b57222724f780fe91f76aa5294304086dbce386c044 AS versionedpie
 FROM docker.io/library/php:8.5-cli-trixie@sha256:f5d2b71350cdc3c2fc807d6679f5bdac2898d7558945105e46308e4659fb37ac
 

@@ -4,29 +4,39 @@
       "email": "tomaschochola@tomaschochola.cz",
       "homepage": "https://github.com/tomaschochola",
       "name": "Tomáš Chochola",
-      "role": "Author"
+      "role": "Enterprise Architect"
     }
   ],
   "autoload": {
     "psr-4": {
-      "TomasChochola\\Migrations\\Oracle\\Database\\": "./src"
+      "TomasChochola\\Migrations\\Oracle\\Database\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "./tests"
+      "Tests\\": "tests/"
     }
   },
   "config": {
     "allow-plugins": false,
-    "audit": {
-      "abandoned": "fail"
-    },
     "platform-check": true,
-    "process-timeout": 0,
+    "policy": {
+      "abandoned": {
+        "audit": "fail",
+        "block": true
+      },
+      "advisories": {
+        "audit": "fail",
+        "block": true
+      },
+      "malware": {
+        "audit": "fail",
+        "block": true
+      }
+    },
     "sort-packages": true
   },
-  "description": "tomaschochola/php-migrations-oracle-database",
+  "description": "Oracle Database migration storage and execution for tomaschochola/php-migrations.",
   "funding": [
     {
       "type": "github",
@@ -36,35 +46,34 @@
   "homepage": "https://github.com/tomaschochola/php-migrations-oracle-database",
   "keywords": [
     "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "php-migrations-oracle-database"
+    "database",
+    "migration",
+    "oracle",
+    "schema"
   ],
   "license": "CC-BY-ND-4.0",
-  "minimum-stability": "dev",
   "name": "tomaschochola/php-migrations-oracle-database",
   "prefer-stable": true,
   "repositories": [
     {
       "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/tooling-phpstan.git"
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/php-migrations.git"
     },
     {
       "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"
-    },
-    {
-      "no-api": true,
-      "type": "git",
+      "type": "vcs",
       "url": "https://github.com/tomaschochola/php-oracle-database.git"
     },
     {
       "no-api": true,
-      "type": "git",
-      "url": "https://github.com/tomaschochola/php-migrations.git"
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"
+    },
+    {
+      "no-api": true,
+      "type": "vcs",
+      "url": "https://github.com/tomaschochola/tooling-phpstan.git"
     }
   ],
   "require": {
@@ -85,7 +94,6 @@
     "tomaschochola/tooling-phpstan": "^1.0@dev"
   },
   "support": {
-    "docs": "https://github.com/tomaschochola/php-migrations-oracle-database",
     "email": "tomaschochola@tomaschochola.cz",
     "issues": "https://github.com/tomaschochola/php-migrations-oracle-database/issues",
     "source": "https://github.com/tomaschochola/php-migrations-oracle-database.git"

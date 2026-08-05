@@ -66,9 +66,9 @@ deps_update: npm_update composer_update
 .PHONY: clean
 clean:
 	rm -rf ./.php-cs-fixer.cache
+	rm -rf ./.phpstan.cache
 	rm -rf ./.phpunit.cache
 	rm -rf ./.phpunit.coverage
-	rm -rf ./.phpunit.result.cache
 
 .PHONY: deps_clean
 deps_clean: npm_deps_clean composer_deps_clean

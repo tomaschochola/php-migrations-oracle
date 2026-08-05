@@ -12,13 +12,17 @@
 
 import { ESLintConfigBuilder, filePatterns } from '@tomaschochola/tooling-eslint';
 
-// eslint-disable-next-line no-restricted-exports
 export default new ESLintConfigBuilder()
   .addNodeGlobals()
-  .addGlobalIgnores(filePatterns.defaultIgnorePatterns)
-  .addGlobalIgnores(['node_modules', 'vendor', '.phpunit.cache', '.phpunit.coverage', '.phpunit.result.cache', '.php-cs-fixer.cache'])
+  .addGitIgnoreFile(import.meta.url)
   .addJavaScriptRecommendedRules()
   .addJavaScriptPolicyRules()
+  .addRawConfig({
+    files: filePatterns.allConfigScriptFiles,
+    rules: {
+      'no-restricted-exports': 'off',
+    },
+  })
   .addStylisticCustomizedRules()
   .addStylisticPolicyRules()
   .disableStylisticLegacyRules()
