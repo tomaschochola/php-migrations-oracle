@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6b341f9406d89f0f01e6878e6454099",
+    "content-hash": "f0f3a1e97acb90351deb2d35b3981f83",
     "packages": [
         {
             "name": "psr/log",
@@ -58,11 +58,17 @@
         },
         {
             "name": "tomaschochola/php-migrations",
-            "version": "1.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "a2577770f386fb30e4ad98afe8559a1b8ab7c24c"
+                "reference": "a26a3c50a458f2b8bc125626b04ec58983cb5e07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/a26a3c50a458f2b8bc125626b04ec58983cb5e07",
+                "reference": "a26a3c50a458f2b8bc125626b04ec58983cb5e07",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.5.0",
@@ -78,16 +84,15 @@
                 "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
                 "tomaschochola/tooling-phpstan": "^1.0@dev"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "TomasChochola\\Migrations\\": "./src"
+                    "TomasChochola\\Migrations\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Tests\\": "./tests"
+                    "Tests\\": "tests/"
                 }
             },
             "license": [
@@ -98,20 +103,19 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Author"
+                    "role": "Enterprise Architect"
                 }
             ],
-            "description": "tomaschochola/php-migrations",
+            "description": "Migration contracts and deterministic migration orchestration for PHP applications.",
             "homepage": "https://github.com/tomaschochola/php-migrations",
             "keywords": [
-                "Tomas Chochola",
-                "TomasChochola",
-                "Tomáš Chochola",
-                "php-migrations",
+                "database",
+                "migration",
+                "migrations",
+                "schema",
                 "tomaschochola"
             ],
             "support": {
-                "docs": "https://github.com/tomaschochola/php-migrations",
                 "email": "tomaschochola@tomaschochola.cz",
                 "issues": "https://github.com/tomaschochola/php-migrations/issues",
                 "source": "https://github.com/tomaschochola/php-migrations.git"
@@ -122,15 +126,21 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-07-29T10:41:43+00:00"
+            "time": "2026-08-05T10:28:45+00:00"
         },
         {
             "name": "tomaschochola/php-oracle-database",
-            "version": "1.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-oracle-database.git",
-                "reference": "c7e7d126377a241c1e3e6a9177e16a2ad2bbb4cd"
+                "reference": "06841abc4bada61c6dec87fa581c9a2d41939183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/php-oracle-database/zipball/06841abc4bada61c6dec87fa581c9a2d41939183",
+                "reference": "06841abc4bada61c6dec87fa581c9a2d41939183",
+                "shasum": ""
             },
             "require": {
                 "ext-oci8": "*",
@@ -146,16 +156,15 @@
                 "tomaschochola/tooling-php-cs-fixer": "^1.0@dev",
                 "tomaschochola/tooling-phpstan": "^1.0@dev"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "TomasChochola\\Oracle\\Database\\": "./src"
+                    "TomasChochola\\Oracle\\Database\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Tests\\": "./tests"
+                    "Tests\\": "tests/"
                 }
             },
             "license": [
@@ -166,20 +175,19 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Author"
+                    "role": "Enterprise Architect"
                 }
             ],
-            "description": "tomaschochola/php-oracle-database",
+            "description": "Typed Oracle Database connection, statement, settings, and exception primitives.",
             "homepage": "https://github.com/tomaschochola/php-oracle-database",
             "keywords": [
-                "Tomas Chochola",
-                "TomasChochola",
-                "Tomáš Chochola",
-                "php-oracle-database",
+                "database",
+                "oci8",
+                "oracle",
+                "sql",
                 "tomaschochola"
             ],
             "support": {
-                "docs": "https://github.com/tomaschochola/php-oracle-database",
                 "email": "tomaschochola@tomaschochola.cz",
                 "issues": "https://github.com/tomaschochola/php-oracle-database/issues",
                 "source": "https://github.com/tomaschochola/php-oracle-database.git"
@@ -190,7 +198,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-07-29T10:41:43+00:00"
+            "time": "2026-08-05T10:28:45+00:00"
         }
     ],
     "packages-dev": [
@@ -656,16 +664,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.95.17",
+            "version": "v3.95.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "0ee88422118f3cc59c8c3def222ba7f1493b6d5b"
+                "reference": "a8b4e4216faabf67f4e96110ee99a48c96e4e683"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/0ee88422118f3cc59c8c3def222ba7f1493b6d5b",
-                "reference": "0ee88422118f3cc59c8c3def222ba7f1493b6d5b",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/a8b4e4216faabf67f4e96110ee99a48c96e4e683",
+                "reference": "a8b4e4216faabf67f4e96110ee99a48c96e4e683",
                 "shasum": ""
             },
             "require": {
@@ -749,7 +757,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.95.17"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.95.18"
             },
             "funding": [
                 {
@@ -757,7 +765,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-07-24T13:54:39+00:00"
+            "time": "2026-07-30T15:46:02+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -995,60 +1003,12 @@
             "time": "2022-02-21T01:04:05+00:00"
         },
         {
-            "name": "phpstan/extension-installer",
-            "version": "1.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpstan/extension-installer.git",
-                "reference": "85e90b3942d06b2326fba0403ec24fe912372936"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/extension-installer/zipball/85e90b3942d06b2326fba0403ec24fe912372936",
-                "reference": "85e90b3942d06b2326fba0403ec24fe912372936",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^2.0",
-                "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.9.0 || ^2.0"
-            },
-            "require-dev": {
-                "composer/composer": "^2.0",
-                "php-parallel-lint/php-parallel-lint": "^1.2.0",
-                "phpstan/phpstan-strict-rules": "^0.11 || ^0.12 || ^1.0"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "PHPStan\\ExtensionInstaller\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "PHPStan\\ExtensionInstaller\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Composer plugin for automatic installation of PHPStan extensions",
-            "keywords": [
-                "dev",
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/phpstan/extension-installer/issues",
-                "source": "https://github.com/phpstan/extension-installer/tree/1.4.3"
-            },
-            "time": "2024-09-04T20:21:43+00:00"
-        },
-        {
             "name": "phpstan/phpstan",
-            "version": "2.2.7",
+            "version": "2.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/692db47b9dddb0487934e5236e77d48594aef921",
-                "reference": "692db47b9dddb0487934e5236e77d48594aef921",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e285254e60f33c21902efef4a926ca0987c06804",
+                "reference": "e285254e60f33c21902efef4a926ca0987c06804",
                 "shasum": ""
             },
             "require": {
@@ -1104,7 +1064,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-07-29T17:39:32+00:00"
+            "time": "2026-08-04T22:21:45+00:00"
         },
         {
             "name": "phpstan/phpstan-beberlei-assert",
@@ -1684,16 +1644,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "14.2.3",
+            "version": "14.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "82f6e49ff224e2cde923d74425e583a883910783"
+                "reference": "048a5c12bdb4580f4767ce2761793a16b170fbe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/82f6e49ff224e2cde923d74425e583a883910783",
-                "reference": "82f6e49ff224e2cde923d74425e583a883910783",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/048a5c12bdb4580f4767ce2761793a16b170fbe4",
+                "reference": "048a5c12bdb4580f4767ce2761793a16b170fbe4",
                 "shasum": ""
             },
             "require": {
@@ -1750,7 +1710,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.2.3"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.2.4"
             },
             "funding": [
                 {
@@ -1770,7 +1730,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-06T15:04:02+00:00"
+            "time": "2026-07-30T17:01:07+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2792,12 +2752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "e0739cf6f94302acbdfb1807731568a47830bb4d"
+                "reference": "50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/e0739cf6f94302acbdfb1807731568a47830bb4d",
-                "reference": "e0739cf6f94302acbdfb1807731568a47830bb4d",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26",
+                "reference": "50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26",
                 "shasum": ""
             },
             "conflict": {
@@ -3149,7 +3109,7 @@
                 "gregwar/rst": "<1.0.3",
                 "grumpydictator/firefly-iii": "<=6.6.2",
                 "gugoan/economizzer": "<=0.9.0.0-beta1",
-                "guzzlehttp/guzzle": "<7.15.1",
+                "guzzlehttp/guzzle": "<7.15.2|>=8,<8.0.1",
                 "guzzlehttp/guzzle-services": "<1.5.4",
                 "guzzlehttp/oauth-subscriber": "<0.8.1",
                 "guzzlehttp/psr7": "<2.12.3",
@@ -3270,7 +3230,7 @@
                 "librenms/librenms": "<26.3",
                 "liftkit/database": "<2.13.2",
                 "lightsaml/lightsaml": "<1.3.5",
-                "limesurvey/limesurvey": "<6.15.4",
+                "limesurvey/limesurvey": "<=7.0.0.0-beta1",
                 "livehelperchat/livehelperchat": "<=3.91",
                 "livewire-filemanager/filemanager": "<=1.0.4",
                 "livewire/livewire": "<2.12.7|>=3.0.0.0-beta1,<3.6.4",
@@ -3403,8 +3363,10 @@
                 "oro/customer-portal": ">=4.1,<=4.1.13|>=4.2,<=4.2.10|>=5,<=5.0.11|>=5.1,<=5.1.3",
                 "oro/platform": ">=1.7,<1.7.4|>=3.1,<3.1.29|>=4.1,<4.1.17|>=4.2,<=4.2.10|>=5,<=5.0.12|>=5.1,<=5.1.3",
                 "oveleon/contao-cookiebar": "<1.16.3|>=2,<2.1.3",
-                "oxid-esales/oxideshop-ce": "<=7.0.5",
+                "oxid-esales/oxideshop-ce": "<4.5|>=6,<6.14.4",
+                "oxid-esales/oxideshop-metapackage-ce": ">=6,<6.5.5",
                 "oxid-esales/paymorrow-module": ">=1,<1.0.2|>=2,<2.0.1",
+                "oxid-esales/smarty-component": "<1.0.1",
                 "packbackbooks/lti-1-3-php-library": "<5",
                 "padraic/humbug_get_contents": "<1.1.2",
                 "pagarme/pagarme-php": "<3",
@@ -3509,7 +3471,7 @@
                 "rap2hpoutre/laravel-log-viewer": "<0.13",
                 "react/http": ">=0.7,<1.9",
                 "really-simple-plugins/complianz-gdpr": "<6.4.2",
-                "redaxo/source": "<5.21",
+                "redaxo/source": "<5.21.1",
                 "remdex/livehelperchat": "<4.29",
                 "renolit/reint-downloadmanager": "<4.0.2|>=5,<5.0.1",
                 "reportico-web/reportico": "<=8.1",
@@ -3566,8 +3528,8 @@
                 "silverstripe/versioned-admin": ">=1,<1.11.1",
                 "simogeo/filemanager": "<=2.5",
                 "simple-updates/phpwhois": "<=1",
-                "simplesamlphp/saml2": "<=4.20.2|>=5,<5.0.6|>=6,<6.2.1",
-                "simplesamlphp/saml2-legacy": "<=4.20.2",
+                "simplesamlphp/saml2": "<4.19.3|>=4.20,<=4.20.2|>=5,<5.0.6|>=6,<6.2.1",
+                "simplesamlphp/saml2-legacy": "<4.19.3|>=4.20,<=4.20.2",
                 "simplesamlphp/simplesamlphp": "<=2.4.6|>=2.5,<=2.5.1",
                 "simplesamlphp/simplesamlphp-module-casserver": "<=7.0.2",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
@@ -3623,6 +3585,7 @@
                 "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
                 "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
                 "sylius/grid-bundle": "<1.10.1",
+                "sylius/mollie-plugin": "<2.2.8|>=3,<3.2.4|>=3.3,<3.3.1",
                 "sylius/paypal-plugin": "<1.6.2|>=1.7,<1.7.2|>=2,<2.0.2",
                 "sylius/resource-bundle": ">=1,<1.3.14|>=1.4,<1.4.7|>=1.5,<1.5.2|>=1.6,<1.6.4",
                 "sylius/sylius": "<1.9.12|>=1.10,<1.10.16|>=1.11,<1.11.17|>=1.12,<=1.12.22|>=1.13,<=1.13.14|>=1.14,<=1.14.17|>=2,<2.0.18|>=2.1,<2.1.15|>=2.2,<2.2.6",
@@ -3801,7 +3764,7 @@
                 "woocommerce/woocommerce": "<6.6|>=8.8,<8.8.5|>=8.9,<8.9.3",
                 "wp-cli/wp-cli": ">=0.12,<2.5",
                 "wp-coding-standards/wpcs": ">=0.14.1,<3.4.1",
-                "wp-graphql/wp-graphql": "<=1.14.5",
+                "wp-graphql/wp-graphql": "<=2.6",
                 "wp-premium/gravityforms": "<2.4.21",
                 "wpanel/wpanel4-cms": "<=4.3.1",
                 "wpcloud/wp-stateless": "<3.2",
@@ -3907,27 +3870,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-28T15:20:31+00:00"
+            "time": "2026-08-05T12:51:34+00:00"
         },
         {
             "name": "sebastian/cli-parser",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/cli-parser.git",
-                "reference": "48a4654fa5e48c1c81214e9930048a572d4b23ca"
+                "reference": "eeb759ad3146b7096fb59c3195d39e071cd409e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/cli-parser/zipball/48a4654fa5e48c1c81214e9930048a572d4b23ca",
-                "reference": "48a4654fa5e48c1c81214e9930048a572d4b23ca",
+                "url": "https://api.github.com/repos/sebastianbergmann/cli-parser/zipball/eeb759ad3146b7096fb59c3195d39e071cd409e3",
+                "reference": "eeb759ad3146b7096fb59c3195d39e071cd409e3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.0"
+                "phpunit/phpunit": "^13.2.6"
             },
             "type": "library",
             "extra": {
@@ -3956,7 +3919,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/cli-parser/issues",
                 "security": "https://github.com/sebastianbergmann/cli-parser/security/policy",
-                "source": "https://github.com/sebastianbergmann/cli-parser/tree/5.0.0"
+                "source": "https://github.com/sebastianbergmann/cli-parser/tree/5.0.1"
             },
             "funding": [
                 {
@@ -3976,7 +3939,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-06T04:39:44+00:00"
+            "time": "2026-08-01T04:27:14+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -4807,23 +4770,23 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "74c5af21f6a5833e91767ca068c4d3dfec15317e"
+                "reference": "32dba72f2b4642d6a93db22d6c0a9280ff2e3ca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/74c5af21f6a5833e91767ca068c4d3dfec15317e",
-                "reference": "74c5af21f6a5833e91767ca068c4d3dfec15317e",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/32dba72f2b4642d6a93db22d6c0a9280ff2e3ca0",
+                "reference": "32dba72f2b4642d6a93db22d6c0a9280ff2e3ca0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.0"
+                "phpunit/phpunit": "^13.2.6"
             },
             "type": "library",
             "extra": {
@@ -4859,7 +4822,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/recursion-context/issues",
                 "security": "https://github.com/sebastianbergmann/recursion-context/security/policy",
-                "source": "https://github.com/sebastianbergmann/recursion-context/tree/8.0.0"
+                "source": "https://github.com/sebastianbergmann/recursion-context/tree/8.0.1"
             },
             "funding": [
                 {
@@ -4879,7 +4842,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-06T04:51:28+00:00"
+            "time": "2026-08-03T05:58:12+00:00"
         },
         {
             "name": "sebastian/type",
@@ -6634,11 +6597,17 @@
         },
         {
             "name": "tomaschochola/tooling-php-cs-fixer",
-            "version": "1.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "508d9bcd3e2b72281496be0f725e331ec08c8275"
+                "reference": "9fef366b49cef71e399279a79f4c4059b4398186"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/9fef366b49cef71e399279a79f4c4059b4398186",
+                "reference": "9fef366b49cef71e399279a79f4c4059b4398186",
+                "shasum": ""
             },
             "require": {
                 "friendsofphp/php-cs-fixer": "^3.92",
@@ -6653,16 +6622,15 @@
                 "roave/security-advisories": "dev-latest",
                 "tomaschochola/tooling-phpstan": "^1.0@dev"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "TomasChochola\\Tooling\\PhpCsFixer\\": "./src"
+                    "TomasChochola\\Tooling\\PhpCsFixer\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Tests\\": "./tests"
+                    "Tests\\": "tests/"
                 }
             },
             "license": [
@@ -6673,20 +6641,19 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Author"
+                    "role": "Enterprise Architect"
                 }
             ],
-            "description": "tomaschochola/tooling-php-cs-fixer",
+            "description": "Shared PHP CS Fixer configuration and custom coding-standard fixers for PHP 8.5.",
             "homepage": "https://github.com/tomaschochola/tooling-php-cs-fixer",
             "keywords": [
-                "Tomas Chochola",
-                "TomasChochola",
-                "Tomáš Chochola",
+                "code-style",
+                "coding-standard",
+                "php-cs-fixer",
                 "tomaschochola",
-                "tooling-php-cs-fixer"
+                "tooling"
             ],
             "support": {
-                "docs": "https://github.com/tomaschochola/tooling-php-cs-fixer",
                 "email": "tomaschochola@tomaschochola.cz",
                 "issues": "https://github.com/tomaschochola/tooling-php-cs-fixer/issues",
                 "source": "https://github.com/tomaschochola/tooling-php-cs-fixer.git"
@@ -6697,19 +6664,24 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-07-29T10:41:43+00:00"
+            "time": "2026-08-05T10:28:47+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
-            "version": "1.x-dev",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "18325cdf7a554f99576589ce6e0f9a1ed0a94f17"
+                "reference": "5b874cfaae6db68c2f89a5c1f804f9ab0499dbf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/5b874cfaae6db68c2f89a5c1f804f9ab0499dbf6",
+                "reference": "5b874cfaae6db68c2f89a5c1f804f9ab0499dbf6",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.5.0",
-                "phpstan/extension-installer": "^1.4",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-beberlei-assert": "^2.0",
                 "phpstan/phpstan-deprecation-rules": "^2.0",
@@ -6729,7 +6701,6 @@
                 "ext-zip": "*",
                 "roave/security-advisories": "dev-latest"
             },
-            "default-branch": true,
             "type": "library",
             "license": [
                 "CC-BY-ND-4.0"
@@ -6739,20 +6710,18 @@
                     "email": "tomaschochola@tomaschochola.cz",
                     "homepage": "https://github.com/tomaschochola",
                     "name": "Tomáš Chochola",
-                    "role": "Author"
+                    "role": "Enterprise Architect"
                 }
             ],
-            "description": "tomaschochola/tooling-phpstan",
+            "description": "Shared strict PHPStan 2 configuration for PHP 8.5 libraries and applications.",
             "homepage": "https://github.com/tomaschochola/tooling-phpstan",
             "keywords": [
-                "Tomas Chochola",
-                "TomasChochola",
-                "Tomáš Chochola",
+                "phpstan",
+                "static-analysis",
                 "tomaschochola",
-                "tooling-phpstan"
+                "tooling"
             ],
             "support": {
-                "docs": "https://github.com/tomaschochola/tooling-phpstan",
                 "email": "tomaschochola@tomaschochola.cz",
                 "issues": "https://github.com/tomaschochola/tooling-phpstan/issues",
                 "source": "https://github.com/tomaschochola/tooling-phpstan.git"
@@ -6763,7 +6732,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-07-29T10:41:43+00:00"
+            "time": "2026-08-05T10:28:47+00:00"
         }
     ],
     "aliases": [],
