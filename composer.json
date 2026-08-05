@@ -4,7 +4,7 @@
       "email": "tomaschochola@tomaschochola.cz",
       "homepage": "https://github.com/tomaschochola",
       "name": "Tomáš Chochola",
-      "role": "Enterprise Architect"
+      "role": "Author"
     }
   ],
   "autoload": {
@@ -46,6 +46,9 @@
   "homepage": "https://github.com/tomaschochola/php-migrations-oracle-database",
   "keywords": [
     "tomaschochola",
+    "TomasChochola",
+    "Tomas Chochola",
+    "Tomáš Chochola",
     "database",
     "migration",
     "oracle",
