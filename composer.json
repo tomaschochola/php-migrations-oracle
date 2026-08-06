@@ -83,8 +83,8 @@
     "ext-oci8": "*",
     "php": "^8.5.0",
     "psr/log": "^3.0",
-    "tomaschochola/php-migrations": "^2.0@dev",
-    "tomaschochola/php-oracle-database": "^2.0@dev"
+    "tomaschochola/php-migrations": "dev-main",
+    "tomaschochola/php-oracle-database": "dev-main"
   },
   "require-dev": {
     "ext-intl": "*",
@@ -93,8 +93,8 @@
     "ext-zip": "*",
     "phpunit/phpunit": "^13.0",
     "roave/security-advisories": "dev-latest",
-    "tomaschochola/tooling-php-cs-fixer": "^2.0@dev",
-    "tomaschochola/tooling-phpstan": "^2.0@dev"
+    "tomaschochola/tooling-php-cs-fixer": "dev-main",
+    "tomaschochola/tooling-phpstan": "dev-main"
   },
   "support": {
     "email": "tomaschochola@tomaschochola.cz",

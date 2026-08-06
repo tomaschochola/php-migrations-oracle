@@ -3,16 +3,3 @@
 
 # composer
 /composer.lock
-
-# svg
-*.svg
-
-# eslint
-*.cjs
-*.cts
-*.js
-*.jsx
-*.mjs
-*.mts
-*.ts
-*.tsx

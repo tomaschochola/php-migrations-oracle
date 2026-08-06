@@ -10,22 +10,11 @@
  * @see {@link https://github.com/sponsors/tomaschochola} GitHub Sponsors
  */
 
-import { ESLintConfigBuilder, filePatterns } from '@tomaschochola/tooling-eslint';
+import { ESLintConfigBuilder } from '@tomaschochola/tooling-eslint';
 
 export default new ESLintConfigBuilder()
   .addNodeGlobals()
   .addGitIgnoreFile(import.meta.url)
   .addJavaScriptRecommendedRules()
-  .addJavaScriptPolicyRules()
-  .addRawConfig({
-    files: filePatterns.allConfigScriptFiles,
-    rules: {
-      'no-restricted-exports': 'off',
-    },
-  })
-  .addStylisticCustomizedRules()
-  .addStylisticPolicyRules()
-  .disableStylisticLegacyRules()
   .addSonarJsRecommendedRules()
-  .addSonarJsPolicyOverrides()
   .toConfig();

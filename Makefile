@@ -33,7 +33,7 @@ export PHP_CS_FIXER_FUTURE_MODE := 1
 # Goals
 
 .PHONY: fix
-fix: eslint_fix prettier_fix php_cs_fixer_fix trimmer_fix
+fix: eslint_fix php_cs_fixer_fix prettier_fix trimmer_fix
 
 .PHONY: check
 check: trimmer_check composer_diagnose lint static test audit
@@ -52,7 +52,7 @@ coverage: phpunit_test
 
 .PHONY: coverage_serve
 coverage_serve: coverage
-	php -S 0.0.0.0:8000 -t ./.phpunit.coverage/html
+	php -S 0.0.0.0:62041 -t ./.phpunit.coverage/html
 
 .PHONY: audit
 audit: npm_audit composer_audit
@@ -83,9 +83,6 @@ composer_deps_clean:
 
 .PHONY: distclean
 distclean: clean deps_clean
-
-.PHONY: nuke
-nuke: down distclean
 
 .PHONY: trimmer_fix
 trimmer_fix: ./node_modules/.package-lock.json ./package.json ./package-lock.json
@@ -179,28 +176,16 @@ up: devcontainer_check
 devcontainer: up
 	devcontainer exec --workspace-folder . /bin/bash
 
-.PHONY: status
-status:
-	docker container ls --all --filter "$(DEVCONTAINER_FILTER)"
-
 .PHONY: stop
 stop:
 	docker container ls --quiet --filter "$(DEVCONTAINER_FILTER)" | while IFS= read -r container; do docker container stop "$$container"; done
 
-.PHONY: restart
-restart:
-	docker container ls --all --quiet --filter "$(DEVCONTAINER_FILTER)" | while IFS= read -r container; do docker container restart "$$container"; done
-
 .PHONY: down
 down: stop
-	docker container ls --all --quiet --filter "$(DEVCONTAINER_FILTER)" | while IFS= read -r container; do docker container rm --volumes "$$container"; done
+	docker container ls --all --quiet --filter "$(DEVCONTAINER_FILTER)" | while IFS= read -r container; do docker container rm "$$container"; done
 
 .PHONY: rebuild
 rebuild: devcontainer_check down
-	devcontainer up --workspace-folder .
-
-.PHONY: rebuild_no_cache
-rebuild_no_cache: devcontainer_check down
 	devcontainer up --workspace-folder . --build-no-cache
 
 ./vendor/autoload.php: ./composer.json ./composer.lock
