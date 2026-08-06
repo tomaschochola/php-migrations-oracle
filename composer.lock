@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0f3a1e97acb90351deb2d35b3981f83",
+    "content-hash": "f1cb35eb3734cee0fc3f588f342df291",
     "packages": [
         {
             "name": "psr/log",
@@ -58,16 +58,16 @@
         },
         {
             "name": "tomaschochola/php-migrations",
-            "version": "2.x-dev",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "25b4707365d2dee60cac5ca5f55072a12ba10163"
+                "reference": "2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/25b4707365d2dee60cac5ca5f55072a12ba10163",
-                "reference": "25b4707365d2dee60cac5ca5f55072a12ba10163",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d",
+                "reference": "2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d",
                 "shasum": ""
             },
             "require": {
@@ -81,8 +81,8 @@
                 "ext-zip": "*",
                 "phpunit/phpunit": "^13.0",
                 "roave/security-advisories": "dev-latest",
-                "tomaschochola/tooling-php-cs-fixer": "^2.0@dev",
-                "tomaschochola/tooling-phpstan": "^2.0@dev"
+                "tomaschochola/tooling-php-cs-fixer": "dev-main",
+                "tomaschochola/tooling-phpstan": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -129,20 +129,20 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T21:42:11+00:00"
+            "time": "2026-08-06T21:00:11+00:00"
         },
         {
             "name": "tomaschochola/php-oracle-database",
-            "version": "2.x-dev",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-oracle-database.git",
-                "reference": "36f9a147cf504095ba8d2eb6a5c055d328d12e48"
+                "reference": "6460588863654bdbf3053b10d9d418cd6cced341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-oracle-database/zipball/36f9a147cf504095ba8d2eb6a5c055d328d12e48",
-                "reference": "36f9a147cf504095ba8d2eb6a5c055d328d12e48",
+                "url": "https://api.github.com/repos/tomaschochola/php-oracle-database/zipball/6460588863654bdbf3053b10d9d418cd6cced341",
+                "reference": "6460588863654bdbf3053b10d9d418cd6cced341",
                 "shasum": ""
             },
             "require": {
@@ -156,8 +156,8 @@
                 "ext-zip": "*",
                 "phpunit/phpunit": "^13.0",
                 "roave/security-advisories": "dev-latest",
-                "tomaschochola/tooling-php-cs-fixer": "^2.0@dev",
-                "tomaschochola/tooling-phpstan": "^2.0@dev"
+                "tomaschochola/tooling-php-cs-fixer": "dev-main",
+                "tomaschochola/tooling-phpstan": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -204,7 +204,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T21:42:11+00:00"
+            "time": "2026-08-06T21:02:12+00:00"
         }
     ],
     "packages-dev": [
@@ -2758,12 +2758,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26"
+                "reference": "b869df2059731ad01759305695f2cfd528e98705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26",
-                "reference": "50bd2d8224ed2c0a6db8a050790c9c1b9e8acf26",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/b869df2059731ad01759305695f2cfd528e98705",
+                "reference": "b869df2059731ad01759305695f2cfd528e98705",
                 "shasum": ""
             },
             "conflict": {
@@ -3568,7 +3568,7 @@
                 "spomky-labs/otphp": "<11.4.3",
                 "spoon/library": "<1.4.1",
                 "spoonity/tcpdf": "<6.2.22",
-                "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
+                "squizlabs/php_codesniffer": "<3.13.6|>=4,<4.0.2",
                 "ssddanbrown/bookstack": "<24.05.1",
                 "starcitizentools/citizen-skin": ">=1.9.4,<3.9",
                 "starcitizentools/short-description": ">=4,<4.0.1",
@@ -3876,7 +3876,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-05T12:51:34+00:00"
+            "time": "2026-08-06T12:55:35+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -6603,16 +6603,16 @@
         },
         {
             "name": "tomaschochola/tooling-php-cs-fixer",
-            "version": "2.x-dev",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "b533e98ffcf3784b2d48700270a105fcd072f3ef"
+                "reference": "07df7f6226d830e2ab14504b7dd781feddad686e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/b533e98ffcf3784b2d48700270a105fcd072f3ef",
-                "reference": "b533e98ffcf3784b2d48700270a105fcd072f3ef",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/07df7f6226d830e2ab14504b7dd781feddad686e",
+                "reference": "07df7f6226d830e2ab14504b7dd781feddad686e",
                 "shasum": ""
             },
             "require": {
@@ -6626,7 +6626,7 @@
                 "ext-zip": "*",
                 "phpunit/phpunit": "^13.0",
                 "roave/security-advisories": "dev-latest",
-                "tomaschochola/tooling-phpstan": "^2.0@dev"
+                "tomaschochola/tooling-phpstan": "dev-main"
             },
             "type": "library",
             "autoload": {
@@ -6673,20 +6673,20 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T21:42:12+00:00"
+            "time": "2026-08-06T20:48:06+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
-            "version": "2.x-dev",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5"
+                "reference": "8bdde11e9b14a6ee146edbb32a95dd524c12fd10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5",
-                "reference": "2d994046aeda75cc1c0b5d7c0fd01d565c0be1c5",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/8bdde11e9b14a6ee146edbb32a95dd524c12fd10",
+                "reference": "8bdde11e9b14a6ee146edbb32a95dd524c12fd10",
                 "shasum": ""
             },
             "require": {
@@ -6744,7 +6744,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-05T21:42:12+00:00"
+            "time": "2026-08-06T20:46:13+00:00"
         }
     ],
     "aliases": [],

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <phpunit
   backupGlobals="true"
   backupStaticProperties="true"
@@ -33,7 +33,7 @@
     pathCoverage="true"
   >
     <report>
-      <html outputDirectory="./.phpunit.coverage/html"/>
+      <html outputDirectory="./.phpunit.coverage/html" />
     </report>
   </coverage>
   <php>
