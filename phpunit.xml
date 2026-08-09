@@ -8,7 +8,7 @@
   beStrictAboutTestsThatDoNotTestAnything="true"
   bootstrap="./vendor/autoload.php"
   cacheDirectory="./.phpunit.cache"
-  cacheResult="false"
+  recordTestRunHistory="false"
   controlGarbageCollector="true"
   defaultTestSuite="tests"
   defaultTimeLimit="1"

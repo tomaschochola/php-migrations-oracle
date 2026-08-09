@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1cb35eb3734cee0fc3f588f342df291",
+    "content-hash": "eedf5a7361b5dc58e01ae36310c05bc2",
     "packages": [
         {
             "name": "psr/log",
@@ -57,17 +57,93 @@
             "time": "2024-09-11T13:17:53+00:00"
         },
         {
+            "name": "tomaschochola/php-database-oracle",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomaschochola/php-database-oracle.git",
+                "reference": "9a8bb10c6658506ea1529d1be2a27491402566be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/9a8bb10c6658506ea1529d1be2a27491402566be",
+                "reference": "9a8bb10c6658506ea1529d1be2a27491402566be",
+                "shasum": ""
+            },
+            "require": {
+                "ext-oci8": "*",
+                "php": "^8.5.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "ext-pcntl": "*",
+                "ext-xdebug": "*",
+                "ext-zip": "*",
+                "phpunit/phpunit": "^13.0",
+                "roave/security-advisories": "dev-latest",
+                "tomaschochola/tooling-php-cs-fixer": "dev-main",
+                "tomaschochola/tooling-phpstan": "dev-main"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TomasChochola\\Database\\Oracle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "CC-BY-ND-4.0"
+            ],
+            "authors": [
+                {
+                    "email": "tomaschochola@tomaschochola.cz",
+                    "homepage": "https://github.com/tomaschochola",
+                    "name": "Tomáš Chochola",
+                    "role": "Author"
+                }
+            ],
+            "description": "Typed Oracle Database connection, statement, settings, and exception primitives.",
+            "homepage": "https://github.com/tomaschochola/php-database-oracle",
+            "keywords": [
+                "Tomas Chochola",
+                "TomasChochola",
+                "Tomáš Chochola",
+                "database",
+                "oci8",
+                "oracle",
+                "sql",
+                "tomaschochola"
+            ],
+            "support": {
+                "email": "tomaschochola@tomaschochola.cz",
+                "issues": "https://github.com/tomaschochola/php-database-oracle/issues",
+                "source": "https://github.com/tomaschochola/php-database-oracle.git"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/sponsors/tomaschochola"
+                }
+            ],
+            "time": "2026-08-09T15:51:50+00:00"
+        },
+        {
             "name": "tomaschochola/php-migrations",
             "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d"
+                "reference": "cb29d277254edf97bd7e532d1300e3506daacdfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d",
-                "reference": "2f3d6996fd06da6aaf850d589f5deff9d0b2fb1d",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/cb29d277254edf97bd7e532d1300e3506daacdfe",
+                "reference": "cb29d277254edf97bd7e532d1300e3506daacdfe",
                 "shasum": ""
             },
             "require": {
@@ -84,6 +160,7 @@
                 "tomaschochola/tooling-php-cs-fixer": "dev-main",
                 "tomaschochola/tooling-phpstan": "dev-main"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -129,82 +206,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-06T21:00:11+00:00"
-        },
-        {
-            "name": "tomaschochola/php-oracle-database",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tomaschochola/php-oracle-database.git",
-                "reference": "6460588863654bdbf3053b10d9d418cd6cced341"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-oracle-database/zipball/6460588863654bdbf3053b10d9d418cd6cced341",
-                "reference": "6460588863654bdbf3053b10d9d418cd6cced341",
-                "shasum": ""
-            },
-            "require": {
-                "ext-oci8": "*",
-                "php": "^8.5.0"
-            },
-            "require-dev": {
-                "ext-intl": "*",
-                "ext-pcntl": "*",
-                "ext-xdebug": "*",
-                "ext-zip": "*",
-                "phpunit/phpunit": "^13.0",
-                "roave/security-advisories": "dev-latest",
-                "tomaschochola/tooling-php-cs-fixer": "dev-main",
-                "tomaschochola/tooling-phpstan": "dev-main"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "TomasChochola\\Oracle\\Database\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "CC-BY-ND-4.0"
-            ],
-            "authors": [
-                {
-                    "email": "tomaschochola@tomaschochola.cz",
-                    "homepage": "https://github.com/tomaschochola",
-                    "name": "Tomáš Chochola",
-                    "role": "Author"
-                }
-            ],
-            "description": "Typed Oracle Database connection, statement, settings, and exception primitives.",
-            "homepage": "https://github.com/tomaschochola/php-oracle-database",
-            "keywords": [
-                "Tomas Chochola",
-                "TomasChochola",
-                "Tomáš Chochola",
-                "database",
-                "oci8",
-                "oracle",
-                "sql",
-                "tomaschochola"
-            ],
-            "support": {
-                "email": "tomaschochola@tomaschochola.cz",
-                "issues": "https://github.com/tomaschochola/php-oracle-database/issues",
-                "source": "https://github.com/tomaschochola/php-oracle-database.git"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/tomaschochola"
-                }
-            ],
-            "time": "2026-08-06T21:02:12+00:00"
+            "time": "2026-08-09T14:39:22+00:00"
         }
     ],
     "packages-dev": [
@@ -1650,16 +1652,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "14.2.4",
+            "version": "14.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "048a5c12bdb4580f4767ce2761793a16b170fbe4"
+                "reference": "060a5c93e81afb01e97dbe8930a5d0c9bd46e54e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/048a5c12bdb4580f4767ce2761793a16b170fbe4",
-                "reference": "048a5c12bdb4580f4767ce2761793a16b170fbe4",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/060a5c93e81afb01e97dbe8930a5d0c9bd46e54e",
+                "reference": "060a5c93e81afb01e97dbe8930a5d0c9bd46e54e",
                 "shasum": ""
             },
             "require": {
@@ -1673,12 +1675,12 @@
                 "sebastian/complexity": "^6.0",
                 "sebastian/environment": "^9.3.2",
                 "sebastian/git-state": "^1.0",
-                "sebastian/lines-of-code": "^5.0.1",
+                "sebastian/lines-of-code": "^5.0.2",
                 "sebastian/version": "^7.0",
                 "theseer/tokenizer": "^2.0.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.2.2"
+                "phpunit/phpunit": "^13.3"
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
@@ -1687,7 +1689,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "14.2.x-dev"
+                    "dev-main": "14.3.x-dev"
                 }
             },
             "autoload": {
@@ -1716,7 +1718,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.2.4"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.3.0"
             },
             "funding": [
                 {
@@ -1736,7 +1738,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-30T17:01:07+00:00"
+            "time": "2026-08-07T07:24:15+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2033,16 +2035,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "13.2.6",
+            "version": "13.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508"
+                "reference": "346fcba6ce7ab89bb1b0675feac6bc29c0f7711b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5d2afe181339a56348ef9a80fa7eb806b7eae508",
-                "reference": "5d2afe181339a56348ef9a80fa7eb806b7eae508",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/346fcba6ce7ab89bb1b0675feac6bc29c0f7711b",
+                "reference": "346fcba6ce7ab89bb1b0675feac6bc29c0f7711b",
                 "shasum": ""
             },
             "require": {
@@ -2056,21 +2058,21 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.4.1",
-                "phpunit/php-code-coverage": "^14.2.3",
+                "phpunit/php-code-coverage": "^14.3",
                 "phpunit/php-file-iterator": "^7.0.0",
                 "phpunit/php-invoker": "^7.0.0",
                 "phpunit/php-text-template": "^6.0.0",
                 "phpunit/php-timer": "^9.0.0",
-                "sebastian/cli-parser": "^5.0.0",
-                "sebastian/comparator": "^8.3.0",
+                "sebastian/cli-parser": "^5.0.1",
+                "sebastian/comparator": "^8.4",
                 "sebastian/diff": "^9.0",
                 "sebastian/environment": "^9.3.2",
-                "sebastian/exporter": "^8.1.1",
+                "sebastian/exporter": "^8.2.1",
                 "sebastian/file-filter": "^1.0",
                 "sebastian/git-state": "^1.0",
                 "sebastian/global-state": "^9.0.1",
                 "sebastian/object-enumerator": "^8.0.0",
-                "sebastian/recursion-context": "^8.0.0",
+                "sebastian/recursion-context": "^8.0.1",
                 "sebastian/type": "^7.0.1",
                 "sebastian/version": "^7.0.0",
                 "staabm/side-effects-detector": "^1.0.5"
@@ -2081,7 +2083,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "13.2-dev"
+                    "dev-main": "13.3-dev"
                 }
             },
             "autoload": {
@@ -2113,7 +2115,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.2.6"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/13.3.0"
             },
             "funding": [
                 {
@@ -2121,7 +2123,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-07-28T14:00:09+00:00"
+            "time": "2026-08-07T07:37:01+00:00"
         },
         {
             "name": "psr/container",
@@ -2758,12 +2760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "b869df2059731ad01759305695f2cfd528e98705"
+                "reference": "f4f38b8750fb0db0242fb03d4727517e3611da8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/b869df2059731ad01759305695f2cfd528e98705",
-                "reference": "b869df2059731ad01759305695f2cfd528e98705",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f4f38b8750fb0db0242fb03d4727517e3611da8b",
+                "reference": "f4f38b8750fb0db0242fb03d4727517e3611da8b",
                 "shasum": ""
             },
             "conflict": {
@@ -2804,7 +2806,7 @@
                 "aoe/restler": "<1.7.1",
                 "apache-solr-for-typo3/solr": "<2.8.3",
                 "apereo/phpcas": "<1.6",
-                "api-platform/core": "<4.1.29|>=4.2,<4.2.25|>=4.3,<4.3.8",
+                "api-platform/core": "<4.1.30|>=4.2,<4.2.26|>=4.3,<4.3.12",
                 "api-platform/graphql": "<3.4.17|>=4,<4.0.22|>=4.1,<4.1.5",
                 "api-platform/hal": ">=4,<4.1.29|>=4.2,<4.2.25|>=4.3,<4.3.8",
                 "api-platform/json-api": ">=4,<4.1.29|>=4.2,<4.2.25|>=4.3,<4.3.8",
@@ -2893,7 +2895,7 @@
                 "code16/sharp": "<9.22.3",
                 "codeception/codeception": "<3.1.3|>=4,<4.1.22",
                 "codeigniter/framework": "<3.1.10",
-                "codeigniter4/framework": "<4.7.2",
+                "codeigniter4/framework": "<4.7.4",
                 "codeigniter4/shield": "<1.0.0.0-beta8",
                 "codiad/codiad": "<=2.8.4",
                 "codingms/additional-tca": ">=1.7,<1.15.17|>=1.16,<1.16.9",
@@ -2918,7 +2920,7 @@
                 "cpsit/typo3-mailqueue": "<0.4.5|>=0.5,<0.5.2",
                 "craftcms/aws-s3": ">=2.0.2,<=2.2.4",
                 "craftcms/azure-blob": ">=2.0.0.0-beta1,<=2.1",
-                "craftcms/cms": "<4.18|>=5,<5.10",
+                "craftcms/cms": "<4.18.3|>=5,<5.10.8",
                 "craftcms/commerce": ">=4,<=4.11.1|>=5,<=5.6.4",
                 "craftcms/composer": ">=4.0.0.0-RC1-dev,<=4.10|>=5.0.0.0-RC1-dev,<=5.5.1",
                 "craftcms/craft": ">=3.5,<=4.16.17|>=5.0.0.0-RC1-dev,<=5.8.21",
@@ -3227,7 +3229,7 @@
                 "lavalite/cms": "<=10.1",
                 "lavitto/typo3-form-to-database": "<2.2.5|>=3,<3.2.2|>=4,<4.2.3|>=5,<5.0.2",
                 "lcobucci/jwt": ">=3.4,<3.4.6|>=4,<4.0.4|>=4.1,<4.1.5",
-                "league/commonmark": "<=2.8.1",
+                "league/commonmark": "<2.9",
                 "league/flysystem": "<1.1.4|>=2,<2.1.1",
                 "league/oauth2-server": ">=8.3.2,<8.4.2|>=8.5,<8.5.3",
                 "leantime/leantime": "<3.3",
@@ -3551,7 +3553,7 @@
                 "slim/psr7": "<1.4.1|>=1.5,<1.5.1|>=1.6,<1.6.1",
                 "slim/slim": "<2.6|>=4.4,<=4.15.1",
                 "slub/slub-events": "<3.0.3",
-                "smarty/smarty": "<4.5.3|>=5,<5.1.1",
+                "smarty/smarty": "<4.5.7|>=5,<5.8.4",
                 "snipe/snipe-it": "<=8.6.1",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
@@ -3574,7 +3576,7 @@
                 "starcitizentools/short-description": ">=4,<4.0.1",
                 "starcitizentools/tabber-neue": ">=1.9.1,<2.7.2|>=3,<3.1.1",
                 "starcitizenwiki/embedvideo": "<=4",
-                "statamic/cms": "<5.74|>=6,<6.20.3",
+                "statamic/cms": "<5.74.3|>=6,<6.24.2",
                 "stormpath/sdk": "<9.9.99",
                 "studio-42/elfinder": "<=2.1.67",
                 "studiomitte/friendlycaptcha": "<0.1.4",
@@ -3876,7 +3878,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-06T12:55:35+00:00"
+            "time": "2026-08-07T18:55:46+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -3949,16 +3951,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "8.3.0",
+            "version": "8.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "c025fc7604afab3f195fab7cdaf72327331af241"
+                "reference": "3b070e608146cba00fd6fd1f0ffba89e5a8897fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/c025fc7604afab3f195fab7cdaf72327331af241",
-                "reference": "c025fc7604afab3f195fab7cdaf72327331af241",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/3b070e608146cba00fd6fd1f0ffba89e5a8897fb",
+                "reference": "3b070e608146cba00fd6fd1f0ffba89e5a8897fb",
                 "shasum": ""
             },
             "require": {
@@ -3966,10 +3968,10 @@
                 "ext-mbstring": "*",
                 "php": ">=8.4",
                 "sebastian/diff": "^9.0",
-                "sebastian/exporter": "^8.1.0"
+                "sebastian/exporter": "^8.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.2"
+                "phpunit/phpunit": "^13.3"
             },
             "suggest": {
                 "ext-bcmath": "For comparing BcMath\\Number objects"
@@ -3977,7 +3979,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.3-dev"
+                    "dev-main": "8.4-dev"
                 }
             },
             "autoload": {
@@ -4017,7 +4019,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/comparator/issues",
                 "security": "https://github.com/sebastianbergmann/comparator/security/policy",
-                "source": "https://github.com/sebastianbergmann/comparator/tree/8.3.0"
+                "source": "https://github.com/sebastianbergmann/comparator/tree/8.4.0"
             },
             "funding": [
                 {
@@ -4037,7 +4039,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-05T03:06:45+00:00"
+            "time": "2026-08-07T07:23:13+00:00"
         },
         {
             "name": "sebastian/complexity",
@@ -4266,30 +4268,30 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "8.1.1",
+            "version": "8.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "cfaa77c750dcad6f44c9bac8f62ac486e1c82c26"
+                "reference": "24a3b69bba4a12ab615fca9d34680c5598d9ab7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/cfaa77c750dcad6f44c9bac8f62ac486e1c82c26",
-                "reference": "cfaa77c750dcad6f44c9bac8f62ac486e1c82c26",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/24a3b69bba4a12ab615fca9d34680c5598d9ab7a",
+                "reference": "24a3b69bba4a12ab615fca9d34680c5598d9ab7a",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": ">=8.4",
-                "sebastian/recursion-context": "^8.0"
+                "sebastian/recursion-context": "^8.0.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.2.4"
+                "phpunit/phpunit": "^13.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "8.1-dev"
+                    "dev-main": "8.2-dev"
                 }
             },
             "autoload": {
@@ -4332,7 +4334,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
                 "security": "https://github.com/sebastianbergmann/exporter/security/policy",
-                "source": "https://github.com/sebastianbergmann/exporter/tree/8.1.1"
+                "source": "https://github.com/sebastianbergmann/exporter/tree/8.2.1"
             },
             "funding": [
                 {
@@ -4352,7 +4354,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-13T11:35:11+00:00"
+            "time": "2026-08-07T07:22:06+00:00"
         },
         {
             "name": "sebastian/file-filter",
@@ -5039,16 +5041,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v8.1.2",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15"
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/535e18a1b8925f6c01a55b171d157ab66c2ace15",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15",
+                "url": "https://api.github.com/repos/symfony/console/zipball/68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
                 "shasum": ""
             },
             "require": {
@@ -5115,7 +5117,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v8.1.2"
+                "source": "https://github.com/symfony/console/tree/v8.1.4"
             },
             "funding": [
                 {
@@ -5135,7 +5137,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-27T13:58:19+00:00"
+            "time": "2026-07-31T12:43:13+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -6607,12 +6609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "07df7f6226d830e2ab14504b7dd781feddad686e"
+                "reference": "fba9e65256ce0fb4d2b51d626e6e8ce35907287f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/07df7f6226d830e2ab14504b7dd781feddad686e",
-                "reference": "07df7f6226d830e2ab14504b7dd781feddad686e",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/fba9e65256ce0fb4d2b51d626e6e8ce35907287f",
+                "reference": "fba9e65256ce0fb4d2b51d626e6e8ce35907287f",
                 "shasum": ""
             },
             "require": {
@@ -6628,6 +6630,7 @@
                 "roave/security-advisories": "dev-latest",
                 "tomaschochola/tooling-phpstan": "dev-main"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -6673,7 +6676,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-06T20:48:06+00:00"
+            "time": "2026-08-09T14:38:54+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6681,12 +6684,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "8bdde11e9b14a6ee146edbb32a95dd524c12fd10"
+                "reference": "4dd0dc4bce240ecb3aed9fa63aaf359164af29c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/8bdde11e9b14a6ee146edbb32a95dd524c12fd10",
-                "reference": "8bdde11e9b14a6ee146edbb32a95dd524c12fd10",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/4dd0dc4bce240ecb3aed9fa63aaf359164af29c5",
+                "reference": "4dd0dc4bce240ecb3aed9fa63aaf359164af29c5",
                 "shasum": ""
             },
             "require": {
@@ -6710,6 +6713,7 @@
                 "ext-zip": "*",
                 "roave/security-advisories": "dev-latest"
             },
+            "default-branch": true,
             "type": "library",
             "license": [
                 "CC-BY-ND-4.0"
@@ -6744,15 +6748,15 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-06T20:46:13+00:00"
+            "time": "2026-08-09T14:38:57+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "roave/security-advisories": 20,
+        "tomaschochola/php-database-oracle": 20,
         "tomaschochola/php-migrations": 20,
-        "tomaschochola/php-oracle-database": 20,
         "tomaschochola/tooling-php-cs-fixer": 20,
         "tomaschochola/tooling-phpstan": 20
     },

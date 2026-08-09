@@ -23,10 +23,10 @@ use PHPUnit\Framework\MockObject\MockObject;
 use Psr\Log\LoggerInterface;
 use ReflectionClass;
 use Stringable;
+use TomasChochola\Database\Oracle\OracleConnection;
+use TomasChochola\Database\Oracle\OracleStatement;
 use TomasChochola\Migrations\MigrationsInterface;
-use TomasChochola\Migrations\Oracle\Database\OracleMigrations;
-use TomasChochola\Oracle\Database\OracleConnection;
-use TomasChochola\Oracle\Database\OracleStatement;
+use TomasChochola\Migrations\Oracle\OracleMigrations;
 use UnexpectedValueException;
 
 use function is_array;
