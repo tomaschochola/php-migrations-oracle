@@ -9,11 +9,36 @@ insert_final_newline = true
 max_line_length = 200
 trim_trailing_whitespace = true
 
-[Makefile]
+[*.{c,cc,cpp,cppm,cxx,cxxm,h,hh,hpp,hxx,inl,ipp,ixx,tpp}]
+indent_size = 4
+
+[*.go]
+indent_size = tab
 indent_style = tab
+tab_width = 8
+
+[*.ini]
+max_line_length = off
+
+[*.md]
+max_line_length = off
 
 [*.php]
 indent_size = 4
 
-[*.ini]
+[*.rs]
+indent_size = 4
+max_line_length = 100
+
+[*.txt]
+indent_size = unset
+indent_style = unset
 max_line_length = off
+
+[LICENSE]
+indent_size = unset
+indent_style = unset
+max_line_length = off
+
+[Makefile]
+indent_style = tab
