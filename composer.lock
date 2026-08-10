@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-database-oracle.git",
-                "reference": "9a8bb10c6658506ea1529d1be2a27491402566be"
+                "reference": "1e968bdeb7a57a49473810ce393f6ee6aad8bb03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/9a8bb10c6658506ea1529d1be2a27491402566be",
-                "reference": "9a8bb10c6658506ea1529d1be2a27491402566be",
+                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/1e968bdeb7a57a49473810ce393f6ee6aad8bb03",
+                "reference": "1e968bdeb7a57a49473810ce393f6ee6aad8bb03",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-09T15:51:50+00:00"
+            "time": "2026-08-10T15:52:31+00:00"
         },
         {
             "name": "tomaschochola/php-migrations",
@@ -138,12 +138,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "cb29d277254edf97bd7e532d1300e3506daacdfe"
+                "reference": "a0ee963e5abdf35c2d91d0f6390afd1f7d560472"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/cb29d277254edf97bd7e532d1300e3506daacdfe",
-                "reference": "cb29d277254edf97bd7e532d1300e3506daacdfe",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/a0ee963e5abdf35c2d91d0f6390afd1f7d560472",
+                "reference": "a0ee963e5abdf35c2d91d0f6390afd1f7d560472",
                 "shasum": ""
             },
             "require": {
@@ -206,7 +206,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-09T14:39:22+00:00"
+            "time": "2026-08-10T15:52:31+00:00"
         }
     ],
     "packages-dev": [
@@ -1742,23 +1742,23 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "7.0.0",
+            "version": "7.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "6e5aa1fb0a95b1703d83e721299ee18bb4e2de50"
+                "reference": "3ccaa29123548190af12fee7af078dcd7f3ddfab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/6e5aa1fb0a95b1703d83e721299ee18bb4e2de50",
-                "reference": "6e5aa1fb0a95b1703d83e721299ee18bb4e2de50",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3ccaa29123548190af12fee7af078dcd7f3ddfab",
+                "reference": "3ccaa29123548190af12fee7af078dcd7f3ddfab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.0"
+                "phpunit/phpunit": "^13.3.0"
             },
             "type": "library",
             "extra": {
@@ -1791,7 +1791,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-file-iterator/issues",
                 "security": "https://github.com/sebastianbergmann/php-file-iterator/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/7.0.0"
+                "source": "https://github.com/sebastianbergmann/php-file-iterator/tree/7.0.1"
             },
             "funding": [
                 {
@@ -1811,7 +1811,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-06T04:33:26+00:00"
+            "time": "2026-08-10T06:43:12+00:00"
         },
         {
             "name": "phpunit/php-invoker",
@@ -4854,23 +4854,23 @@
         },
         {
             "name": "sebastian/type",
-            "version": "7.0.1",
+            "version": "7.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "fee0309275847fefd7636167085e379c1dbf6990"
+                "reference": "bd1df467864cb95140414059a535b2d906173fcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/fee0309275847fefd7636167085e379c1dbf6990",
-                "reference": "fee0309275847fefd7636167085e379c1dbf6990",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/bd1df467864cb95140414059a535b2d906173fcf",
+                "reference": "bd1df467864cb95140414059a535b2d906173fcf",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.1.10"
+                "phpunit/phpunit": "^13.3.0"
             },
             "type": "library",
             "extra": {
@@ -4899,7 +4899,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
                 "security": "https://github.com/sebastianbergmann/type/security/policy",
-                "source": "https://github.com/sebastianbergmann/type/tree/7.0.1"
+                "source": "https://github.com/sebastianbergmann/type/tree/7.0.2"
             },
             "funding": [
                 {
@@ -4919,7 +4919,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-20T06:49:11+00:00"
+            "time": "2026-08-10T08:00:57+00:00"
         },
         {
             "name": "sebastian/version",
@@ -6609,12 +6609,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "fba9e65256ce0fb4d2b51d626e6e8ce35907287f"
+                "reference": "7d1768412c57e0a7a330e3b51ff88d237b21bb63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/fba9e65256ce0fb4d2b51d626e6e8ce35907287f",
-                "reference": "fba9e65256ce0fb4d2b51d626e6e8ce35907287f",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/7d1768412c57e0a7a330e3b51ff88d237b21bb63",
+                "reference": "7d1768412c57e0a7a330e3b51ff88d237b21bb63",
                 "shasum": ""
             },
             "require": {
@@ -6676,7 +6676,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-09T14:38:54+00:00"
+            "time": "2026-08-10T15:52:31+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6684,12 +6684,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "4dd0dc4bce240ecb3aed9fa63aaf359164af29c5"
+                "reference": "c235221c314a1832735a5684a3d05e30d4ad0546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/4dd0dc4bce240ecb3aed9fa63aaf359164af29c5",
-                "reference": "4dd0dc4bce240ecb3aed9fa63aaf359164af29c5",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/c235221c314a1832735a5684a3d05e30d4ad0546",
+                "reference": "c235221c314a1832735a5684a3d05e30d4ad0546",
                 "shasum": ""
             },
             "require": {
@@ -6748,7 +6748,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-08-09T14:38:57+00:00"
+            "time": "2026-08-10T15:52:31+00:00"
         }
     ],
     "aliases": [],
