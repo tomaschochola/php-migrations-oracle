@@ -3,14 +3,11 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 2
+indent_size = 4
 indent_style = space
 insert_final_newline = true
 max_line_length = 200
 trim_trailing_whitespace = true
-
-[*.{c,cc,cpp,cppm,cxx,cxxm,h,hh,hpp,hxx,inl,ipp,ixx,tpp}]
-indent_size = 4
 
 [*.go]
 indent_size = tab
@@ -21,16 +18,6 @@ tab_width = 8
 max_line_length = off
 
 [*.md]
-max_line_length = off
-
-[*.php]
-indent_size = 4
-
-[*.rs]
-indent_size = 4
-max_line_length = 100
-
-[*.txt]
 indent_size = unset
 indent_style = unset
 max_line_length = off

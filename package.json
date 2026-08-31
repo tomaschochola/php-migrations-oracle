@@ -1,48 +1,48 @@
 {
-  "author": {
-    "email": "tomaschochola@tomaschochola.cz",
-    "name": "Tomáš Chochola",
-    "url": "https://github.com/tomaschochola"
-  },
-  "bugs": {
-    "email": "tomaschochola@tomaschochola.cz",
-    "url": "https://github.com/tomaschochola/php-migrations-oracle/issues"
-  },
-  "contributors": [
-    {
-      "email": "tomaschochola@tomaschochola.cz",
-      "name": "Tomáš Chochola",
-      "url": "https://github.com/tomaschochola"
-    }
-  ],
-  "description": "Oracle Database migration storage and execution for tomaschochola/php-migrations.",
-  "devDependencies": {
-    "@tomaschochola/tooling-eslint": "github:tomaschochola/tooling-eslint#main",
-    "@tomaschochola/tooling-prettier": "github:tomaschochola/tooling-prettier#main",
-    "@tomaschochola/tooling-trimmer": "github:tomaschochola/tooling-trimmer#main"
-  },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/tomaschochola"
-  },
-  "homepage": "https://github.com/tomaschochola/php-migrations-oracle",
-  "keywords": [
-    "tomaschochola",
-    "TomasChochola",
-    "Tomas Chochola",
-    "Tomáš Chochola",
-    "database",
-    "migration",
-    "oracle",
-    "schema"
-  ],
-  "license": "CC-BY-ND-4.0",
-  "name": "@tomaschochola/php-migrations-oracle",
-  "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tomaschochola/php-migrations-oracle.git"
-  },
-  "type": "module",
-  "version": "0.0.0"
+    "author": {
+        "email": "tomaschochola@tomaschochola.cz",
+        "name": "Tomáš Chochola",
+        "url": "https://github.com/tomaschochola"
+    },
+    "bugs": {
+        "email": "tomaschochola@tomaschochola.cz",
+        "url": "https://github.com/tomaschochola/php-migrations-oracle/issues"
+    },
+    "contributors": [
+        {
+            "email": "tomaschochola@tomaschochola.cz",
+            "name": "Tomáš Chochola",
+            "url": "https://github.com/tomaschochola"
+        }
+    ],
+    "description": "Oracle Database migration storage and execution for tomaschochola/php-migrations.",
+    "devDependencies": {
+        "@tomaschochola/tooling-eslint": "git+https://github.com/tomaschochola/tooling-eslint.git#main",
+        "@tomaschochola/tooling-prettier": "git+https://github.com/tomaschochola/tooling-prettier.git#main",
+        "@tomaschochola/tooling-trimmer": "git+https://github.com/tomaschochola/tooling-trimmer.git#main"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/tomaschochola"
+    },
+    "homepage": "https://github.com/tomaschochola/php-migrations-oracle",
+    "keywords": [
+        "tomaschochola",
+        "TomasChochola",
+        "Tomas Chochola",
+        "Tomáš Chochola",
+        "database",
+        "migration",
+        "oracle",
+        "schema"
+    ],
+    "license": "CC-BY-ND-4.0",
+    "name": "@tomaschochola/php-migrations-oracle",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tomaschochola/php-migrations-oracle.git"
+    },
+    "type": "module",
+    "version": "0.0.0"
 }
