@@ -36,7 +36,7 @@ export PHP_CS_FIXER_FUTURE_MODE := 1
 fix: eslint_fix php_cs_fixer_fix prettier_fix trimmer_fix
 
 .PHONY: check
-check: doctor lint analyze test audit
+check: doctor lint analyze coverage audit
 
 .PHONY: doctor
 doctor: git_check npm_config_check npm_doctor composer_diagnose
@@ -61,10 +61,7 @@ update: npm_config_check ./package.json ./package-lock.json ./composer.json ./co
 
 .PHONY: clean
 clean:
-	rm -rf ./.php-cs-fixer.cache
-	rm -rf ./.phpstan.cache
-	rm -rf ./.phpunit.cache
-	rm -rf ./.phpunit.coverage
+	rm --force --recursive --one-file-system -- ./.php-cs-fixer.cache ./.phpstan.cache ./.phpunit.cache ./.phpunit.coverage
 
 .PHONY: distclean
 distclean: clean deps_clean
@@ -166,7 +163,7 @@ npm_check: npm_config_check ./node_modules/.package-lock.json
 
 .PHONY: npm_audit
 npm_audit: npm_config_check ./node_modules/.package-lock.json ./package.json ./package-lock.json
-	npm audit --ignore-scripts --audit-level=high --install-links --include=prod --include=dev --include=peer --include=optional
+	npm audit --ignore-scripts --audit-level=moderate --install-links --include=prod --include=dev --include=peer --include=optional
 
 .PHONY: npm_install
 npm_install: npm_config_check ./package.json ./package-lock.json
@@ -178,7 +175,7 @@ npm_update: npm_config_check ./package.json ./package-lock.json npm_clean
 
 .PHONY: npm_clean
 npm_clean:
-	rm -rf ./node_modules
+	rm --force --recursive --one-file-system -- ./node_modules
 
 .PHONY: composer_diagnose
 composer_diagnose:
@@ -206,11 +203,7 @@ composer_update: ./composer.json ./composer.lock composer_clean
 
 .PHONY: composer_clean
 composer_clean:
-	rm -rf ./vendor
-
-.PHONY: coverage_serve
-coverage_serve: coverage
-	php -S 0.0.0.0:62041 -t ./.phpunit.coverage/html
+	rm --force --recursive --one-file-system -- ./vendor
 
 .PHONY: git_check
 git_check:
