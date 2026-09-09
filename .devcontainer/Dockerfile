@@ -27,10 +27,10 @@ RUN mkdir -p /opt/oracle \
     && unzip -oq /tmp/instantclient-sdk.zip -d /opt/oracle \
     && mv /opt/oracle/instantclient_23_26 /opt/oracle/instantclient
 
-FROM docker.io/library/composer:2@sha256:4d71c3c2109c61d5415544264b59ad4087e4c5b7244481723664138fd36d5040 AS versionedcomposer
-FROM docker.io/library/node:24-trixie@sha256:ef91212c27702eab90248892b1ac837ba3e903f78385770bd11f7c460e28eaf7 AS versionednode
-FROM ghcr.io/php/pie:1.4.5-bin@sha256:14bc484d9be70396e31b0b57222724f780fe91f76aa5294304086dbce386c044 AS versionedpie
-FROM docker.io/library/php:8.5-cli-trixie@sha256:f5d2b71350cdc3c2fc807d6679f5bdac2898d7558945105e46308e4659fb37ac
+FROM docker.io/library/composer:2@sha256:d8f6343d3fae98107426bc49163ccad46ef85aabd4a27d80a74401fab4aba332 AS versionedcomposer
+FROM docker.io/library/node:24-trixie@sha256:f7d34e58713740f9eef9092c0bd6ff10369d132f7238399a4b270f16d47fa608 AS versionednode
+FROM ghcr.io/php/pie:1.4.9-bin@sha256:9fb4fb481767c48f7c57a7fc2c1ccef6ec8fc1e254751a77213cfb0c8f181eba AS versionedpie
+FROM docker.io/library/php:8.5-cli-trixie@sha256:9ebdf4c28ab12c02085e171c31e22ac5f7bbb6a9f6927e3bc3dfe7ee23df51e0
 
 COPY --from=versionedcomposer /usr/bin/composer /usr/local/bin/composer
 COPY --from=versionednode /usr/local/bin/node /usr/local/bin/node
