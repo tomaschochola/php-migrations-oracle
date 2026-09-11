@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-database-oracle.git",
-                "reference": "faa565ef26852e2e662b98390e8d08bb8a6e9187"
+                "reference": "119afb4661c124a0e28eb69f460cc584299ebe2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/faa565ef26852e2e662b98390e8d08bb8a6e9187",
-                "reference": "faa565ef26852e2e662b98390e8d08bb8a6e9187",
+                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/119afb4661c124a0e28eb69f460cc584299ebe2a",
+                "reference": "119afb4661c124a0e28eb69f460cc584299ebe2a",
                 "shasum": ""
             },
             "require": {
@@ -130,7 +130,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T13:51:06+00:00"
+            "time": "2026-09-11T14:43:15+00:00"
         },
         {
             "name": "tomaschochola/php-migrations",
@@ -138,12 +138,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "77c42c55207c849be0802fb6303b59c0b8dcd579"
+                "reference": "566ae5b0eff3e177ad4690649255b118ee3f962d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/77c42c55207c849be0802fb6303b59c0b8dcd579",
-                "reference": "77c42c55207c849be0802fb6303b59c0b8dcd579",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/566ae5b0eff3e177ad4690649255b118ee3f962d",
+                "reference": "566ae5b0eff3e177ad4690649255b118ee3f962d",
                 "shasum": ""
             },
             "require": {
@@ -206,7 +206,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T13:53:22+00:00"
+            "time": "2026-09-11T14:45:04+00:00"
         }
     ],
     "packages-dev": [
@@ -1651,16 +1651,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "14.3.2",
+            "version": "14.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "93d62632fb675b76c9b941fdcfcfa10ffb9dea75"
+                "reference": "f8640c238e930b914d0098a1edbad6652e61a64a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/93d62632fb675b76c9b941fdcfcfa10ffb9dea75",
-                "reference": "93d62632fb675b76c9b941fdcfcfa10ffb9dea75",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/f8640c238e930b914d0098a1edbad6652e61a64a",
+                "reference": "f8640c238e930b914d0098a1edbad6652e61a64a",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1679,7 @@
                 "theseer/tokenizer": "^2.0.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^13.3.2"
+                "phpunit/phpunit": "^13.3.3"
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
@@ -1717,7 +1717,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.3.2"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/14.3.3"
             },
             "funding": [
                 {
@@ -1737,7 +1737,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-04T03:46:43+00:00"
+            "time": "2026-09-10T13:08:32+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
