@@ -2759,12 +2759,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "3351b8b86dbff4e6abbca303a61d27b65468203a"
+                "reference": "55a9238f51c5449fdaa650fb03322dfca498a2e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3351b8b86dbff4e6abbca303a61d27b65468203a",
-                "reference": "3351b8b86dbff4e6abbca303a61d27b65468203a",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/55a9238f51c5449fdaa650fb03322dfca498a2e5",
+                "reference": "55a9238f51c5449fdaa650fb03322dfca498a2e5",
                 "shasum": ""
             },
             "conflict": {
@@ -3494,7 +3494,7 @@
                 "ralffreit/mfa-email": "<1.0.7|==2",
                 "rankmath/seo-by-rank-math": "<=1.0.95",
                 "rap2hpoutre/laravel-log-viewer": "<0.13",
-                "react/http": ">=0.7,<1.9",
+                "react/http": ">=0.6,<1.11.1",
                 "really-simple-plugins/complianz-gdpr": "<6.4.2",
                 "redaxo/source": "<5.21.1",
                 "remdex/livehelperchat": "<4.29",
@@ -3897,7 +3897,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-08T21:35:56+00:00"
+            "time": "2026-09-09T20:29:53+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -6627,12 +6627,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "e041cc6ce9b70f728e1026694c21264a5c328117"
+                "reference": "353846a395eb12dce76c9d4fea01b514ffc90f2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/e041cc6ce9b70f728e1026694c21264a5c328117",
-                "reference": "e041cc6ce9b70f728e1026694c21264a5c328117",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/353846a395eb12dce76c9d4fea01b514ffc90f2d",
+                "reference": "353846a395eb12dce76c9d4fea01b514ffc90f2d",
                 "shasum": ""
             },
             "require": {
@@ -6694,7 +6694,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T12:10:08+00:00"
+            "time": "2026-09-09T14:16:48+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6702,12 +6702,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "ce15949c8bfd4df4493c3a1803d8d76ae8639a61"
+                "reference": "f5e0751e07f4e8d3ae12b47ee71fa57e87a2c632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/ce15949c8bfd4df4493c3a1803d8d76ae8639a61",
-                "reference": "ce15949c8bfd4df4493c3a1803d8d76ae8639a61",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/f5e0751e07f4e8d3ae12b47ee71fa57e87a2c632",
+                "reference": "f5e0751e07f4e8d3ae12b47ee71fa57e87a2c632",
                 "shasum": ""
             },
             "require": {
@@ -6766,7 +6766,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-09-09T12:11:59+00:00"
+            "time": "2026-09-09T14:17:46+00:00"
         }
     ],
     "aliases": [],
