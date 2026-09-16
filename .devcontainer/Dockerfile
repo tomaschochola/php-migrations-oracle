@@ -59,12 +59,13 @@ COPY --from=instantclient /tmp/instantclient-sdk.zip /tmp/instantclient-sdk.zip
 RUN --mount=type=bind,from=pie,source=/pie,target=/usr/local/bin/pie \
     apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get upgrade --yes --no-install-recommends \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends git libaio1t64 libicu-dev libtool libzip-dev openssh-client python3 sudo unzip zip \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends ca-certificates git libaio1t64 libicu-dev libtool libzip-dev make openssh-client python3 sudo unzip zip \
     && unzip -oq /tmp/instantclient-basic.zip -d /opt/oracle \
     && unzip -oq /tmp/instantclient-sdk.zip -d /opt/oracle \
     && ln --symbolic instantclient_23_26 /opt/oracle/instantclient \
     && rm --force -- /tmp/instantclient-basic.zip /tmp/instantclient-sdk.zip \
-    && tar --extract --gzip --file /tmp/node.tgz --directory /usr/local --strip-components=1 --exclude='*/README.md' --exclude='*/CHANGELOG.md' --exclude='*/LICENSE' \
+    && tar --extract --gzip --file /tmp/node.tgz --directory /usr/local --strip-components=1 --no-same-owner --exclude='*/README.md' --exclude='*/CHANGELOG.md' --exclude='*/LICENSE' \
+    && ln --symbolic /usr/local/bin/node /usr/local/bin/nodejs \
     && rm --force -- /tmp/node.tgz \
     && multiarch="$(dpkg-architecture -qDEB_HOST_MULTIARCH)" \
     && ln --symbolic "/usr/lib/${multiarch}/libaio.so.1t64" "/usr/lib/${multiarch}/libaio.so.1" \
