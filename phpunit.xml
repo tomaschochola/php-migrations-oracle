@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     backupGlobals="true"
     backupStaticProperties="true"
     beStrictAboutChangesToGlobalState="true"
@@ -14,7 +15,6 @@
     defaultTimeLimit="1"
     displayDetailsOnAllIssues="true"
     enforceTimeLimit="true"
-    executionOrder="depends"
     failOnAllIssues="true"
     numberOfTestsBeforeGarbageCollection="1"
     processIsolation="true"
@@ -23,8 +23,8 @@
     timeoutForLargeTests="60"
     timeoutForMediumTests="10"
     timeoutForSmallTests="1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+    resolveDependencies="true"
 >
     <coverage
         disableCodeCoverageIgnore="true"

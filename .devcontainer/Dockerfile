@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+# syntax=docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
 
 ARG TARGETARCH
 
@@ -36,20 +36,20 @@ ADD --checksum=sha256:d8f3e350437bf3b5342dbf046064ebd1f017ebc720955433194360a01c
 
 FROM scratch AS node-amd64
 
-ADD --checksum=sha256:855d581f8a4eb1a8117e3426de25fe02770592febcfb31369aee1ffbfee9e8ec \
-    https://nodejs.org/dist/v24.20.0/node-v24.20.0-linux-x64.tar.gz \
+ADD --checksum=sha256:28ea0a438de9a13bd7891fd758eee6c7819ee8af5442dfd8d45bd65e56d4228c \
+    https://nodejs.org/dist/v24.22.0/node-v24.22.0-linux-x64.tar.gz \
     /tmp/node.tgz
 
 FROM scratch AS node-arm64
 
-ADD --checksum=sha256:3515603e2487879a39bc75716f1a2affd027500c64ba50e845cf72cb33219013 \
-    https://nodejs.org/dist/v24.20.0/node-v24.20.0-linux-arm64.tar.gz \
+ADD --checksum=sha256:b7e7991d5407815adfa74a2a9cd4db683552c8ce32ff4a295c22e972849c3f5d \
+    https://nodejs.org/dist/v24.22.0/node-v24.22.0-linux-arm64.tar.gz \
     /tmp/node.tgz
 
 FROM node-${TARGETARCH} AS node
 
-FROM ghcr.io/php/pie:1.4.9-bin@sha256:9fb4fb481767c48f7c57a7fc2c1ccef6ec8fc1e254751a77213cfb0c8f181eba AS pie
-FROM docker.io/library/php:8.5-cli-trixie@sha256:9ebdf4c28ab12c02085e171c31e22ac5f7bbb6a9f6927e3bc3dfe7ee23df51e0
+FROM ghcr.io/php/pie:1.5.2-bin@sha256:a254c78b51ca34daef0541fa1cf0147385c93ba5ca799868392275d947f00fe7 AS pie
+FROM docker.io/library/php:8.5-cli-trixie@sha256:01a109229f4465bc9ef042d9198f09a4d9da7775a825dbd8572dcdbd8756c4d3
 
 COPY --from=composer /tmp/composer.phar /usr/local/bin/composer
 COPY --from=node /tmp/node.tgz /tmp/node.tgz

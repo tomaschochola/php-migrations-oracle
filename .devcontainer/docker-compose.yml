@@ -1,5 +1,3 @@
-name: 'php-migrations-oracle-devcontainer'
-
 networks:
     devcontainer:
         internal: false
@@ -11,7 +9,9 @@ services:
         build:
             context: './'
             dockerfile: 'Dockerfile'
-        command: ['sleep', 'infinity']
+        command:
+            - 'sleep'
+            - 'infinity'
         depends_on:
             wiremock:
                 condition: 'service_healthy'
@@ -24,7 +24,9 @@ services:
             options:
                 max-file: '3'
                 max-size: '10m'
-        networks: ['devcontainer', 'wiremock']
+        networks:
+            - 'devcontainer'
+            - 'wiremock'
         ports:
             - '62040:62040'
             - '127.0.0.1:62041-62042:62041-62042'
