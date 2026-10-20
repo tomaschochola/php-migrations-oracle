@@ -103,7 +103,7 @@ nuke: distclean prune
 
 .PHONY: prune
 prune: host_gate
-	docker compose -f "$(DEVCONTAINER_COMPOSE)" down --volumes --rmi all --remove-orphans
+	docker compose -f "$(DEVCONTAINER_COMPOSE)" down --volumes --rmi local --remove-orphans
 
 # Protected goals
 

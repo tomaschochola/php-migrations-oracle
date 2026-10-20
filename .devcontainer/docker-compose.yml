@@ -49,7 +49,7 @@ services:
             start_period: '30s'
             test: ['CMD', 'curl', '--fail', '--silent', '--show-error', 'http://127.0.0.1:8080/__admin/health']
             timeout: '5s'
-        image: 'docker.io/wiremock/wiremock:3.13.2-3@sha256:0d4ecb3e4dc8213fd7a4d37d6a78f6e6b553a6d2e15bd51b0999781282ac61b3'
+        image: 'docker.io/wiremock/wiremock@sha256:0d4ecb3e4dc8213fd7a4d37d6a78f6e6b553a6d2e15bd51b0999781282ac61b3'
         logging:
             driver: 'json-file'
             options:
