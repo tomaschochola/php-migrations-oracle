@@ -49,10 +49,7 @@
         "TomasChochola",
         "Tomas Chochola",
         "Tomáš Chochola",
-        "database",
-        "migration",
-        "oracle",
-        "schema"
+        "php-migrations-oracle"
     ],
     "license": "CC-BY-ND-4.0",
     "name": "tomaschochola/php-migrations-oracle",
