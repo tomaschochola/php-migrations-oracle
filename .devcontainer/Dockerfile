@@ -4,8 +4,8 @@ ARG TARGETARCH
 
 FROM scratch AS composer
 
-ADD --chmod=0755 --checksum=sha256:7a2d379d5b8ffdaa028580ef26494c36d2feef4b178d3dd1473a4dbc5e17c8d6 \
-    https://getcomposer.org/download/2.10.3/composer.phar \
+ADD --chmod=0755 --checksum=sha256:6f1b891e1d4927d62740276c540fb490e47689e19e102c49e8da849794882f8c \
+    https://getcomposer.org/download/2.11.1/composer.phar \
     /tmp/composer.phar
 
 ADD --checksum=sha256:2b2df89fb2581e669b4668b451097d4a03f4dc2d7a06df197554064494a90a31 \
@@ -52,9 +52,9 @@ ADD --checksum=sha256:439e9c438acdf6a6ffe47418da709153d66c4bed812e30a473faacb107
 
 FROM node-${TARGETARCH} AS node
 
-FROM ghcr.io/php/pie:1.5.3-bin@sha256:9d3e6d9dafa5ae8cf034489260e206a5aa1b488b29c0ddaea9149826d9e32f52 AS pie
+FROM ghcr.io/php/pie:1.5.5-bin@sha256:3fca03c16df842d02b654dc382db3756058d9c128064f57cace14f8728779ce9 AS pie
 
-FROM docker.io/library/php:8.5.12-cli-trixie@sha256:635a4b998025ab269194639a5549c6fdcd9b4f88ec8cd761b092de8653d40663
+FROM docker.io/library/php:8.5.12-cli-trixie@sha256:9236fd373d3bcda0659cf94838a744bd79791419292958963f8c6b34a0071554
 
 COPY --from=composer /tmp/composer.phar /usr/local/bin/composer
 COPY --from=instantclient /tmp/instantclient-basic.zip /tmp/instantclient-basic.zip
