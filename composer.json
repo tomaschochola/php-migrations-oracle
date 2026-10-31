@@ -79,7 +79,7 @@
     "require": {
         "ext-oci8": "*",
         "php": "^8.5.0",
-        "psr/log": "^3.0",
+        "psr/log": "^3.0.2",
         "tomaschochola/php-migrations": "dev-main",
         "tomaschochola/php-database-oracle": "dev-main"
     },
@@ -88,7 +88,7 @@
         "ext-pcntl": "*",
         "ext-xdebug": "*",
         "ext-zip": "*",
-        "phpunit/phpunit": "^13.0",
+        "phpunit/phpunit": "^13.4.5",
         "roave/security-advisories": "dev-latest",
         "tomaschochola/tooling-php-cs-fixer": "dev-main",
         "tomaschochola/tooling-phpstan": "dev-main"
