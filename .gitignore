@@ -6,8 +6,22 @@
 .zed
 .antigravitycli
 
-# devcontainer
-/.devcontainer/.tmp
+# temporary
+/temp/
+/temporary/
+/tmp/
+/.temp/
+/.temporary/
+/.tmp/
+
+# agent
+/PLAN.md
+/NOTES.md
+/ARCHITECTURE.md
+
+# environment
+/.env
+/.secrets
 
 # node
 /node_modules
@@ -15,16 +29,12 @@
 # composer
 /vendor
 
-# environment files and secrets
-/.env
-/.secrets
-
-# phpunit
-/.phpunit.cache
-/.phpunit.coverage
-
 # php-cs-fixer
 /.php-cs-fixer.cache
 
 # phpstan
 /.phpstan.cache
+
+# phpunit
+/.phpunit.cache
+/.phpunit.coverage
