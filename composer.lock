@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-database-oracle.git",
-                "reference": "da2bf27687e86e883d6afb993341ab7fcc24d106"
+                "reference": "c68d7b85a3bb00690332e2c3ba8aa780b8ec7bbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/da2bf27687e86e883d6afb993341ab7fcc24d106",
-                "reference": "da2bf27687e86e883d6afb993341ab7fcc24d106",
+                "url": "https://api.github.com/repos/tomaschochola/php-database-oracle/zipball/c68d7b85a3bb00690332e2c3ba8aa780b8ec7bbf",
+                "reference": "c68d7b85a3bb00690332e2c3ba8aa780b8ec7bbf",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +80,7 @@
                 "ext-pcntl": "*",
                 "ext-xdebug": "*",
                 "ext-zip": "*",
-                "phpunit/phpunit": "^13.0",
+                "phpunit/phpunit": "^13.4.5",
                 "roave/security-advisories": "dev-latest",
                 "tomaschochola/tooling-php-cs-fixer": "dev-main",
                 "tomaschochola/tooling-phpstan": "dev-main"
@@ -128,7 +128,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T14:00:27+00:00"
+            "time": "2026-10-31T16:12:06+00:00"
         },
         {
             "name": "tomaschochola/php-migrations",
@@ -136,24 +136,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/php-migrations.git",
-                "reference": "0db9eba8aea8f0f80447600c6561c22cbb4dfa45"
+                "reference": "dc330c7dcaf92ca20b37d7b176b442747bf840d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/0db9eba8aea8f0f80447600c6561c22cbb4dfa45",
-                "reference": "0db9eba8aea8f0f80447600c6561c22cbb4dfa45",
+                "url": "https://api.github.com/repos/tomaschochola/php-migrations/zipball/dc330c7dcaf92ca20b37d7b176b442747bf840d9",
+                "reference": "dc330c7dcaf92ca20b37d7b176b442747bf840d9",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.5.0",
-                "psr/log": "^3.0"
+                "psr/log": "^3.0.2"
             },
             "require-dev": {
                 "ext-intl": "*",
                 "ext-pcntl": "*",
                 "ext-xdebug": "*",
                 "ext-zip": "*",
-                "phpunit/phpunit": "^13.0",
+                "phpunit/phpunit": "^13.4.5",
                 "roave/security-advisories": "dev-latest",
                 "tomaschochola/tooling-php-cs-fixer": "dev-main",
                 "tomaschochola/tooling-phpstan": "dev-main"
@@ -201,7 +201,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T14:00:32+00:00"
+            "time": "2026-10-31T16:12:36+00:00"
         }
     ],
     "packages-dev": [
@@ -6670,16 +6670,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-php-cs-fixer.git",
-                "reference": "16b8823d4846116438d342922f20d8406c94c55c"
+                "reference": "cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/16b8823d4846116438d342922f20d8406c94c55c",
-                "reference": "16b8823d4846116438d342922f20d8406c94c55c",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-php-cs-fixer/zipball/cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd",
+                "reference": "cdd3d9ccf1fa874bd63c250dfbf5739abd4d90dd",
                 "shasum": ""
             },
             "require": {
-                "friendsofphp/php-cs-fixer": "^3.92",
+                "friendsofphp/php-cs-fixer": "^3.95.27",
                 "php": "^8.5.0"
             },
             "require-dev": {
@@ -6687,7 +6687,7 @@
                 "ext-pcntl": "*",
                 "ext-xdebug": "*",
                 "ext-zip": "*",
-                "phpunit/phpunit": "^13.0",
+                "phpunit/phpunit": "^13.4.5",
                 "roave/security-advisories": "dev-latest",
                 "tomaschochola/tooling-phpstan": "dev-main"
             },
@@ -6734,7 +6734,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T14:01:52+00:00"
+            "time": "2026-10-31T16:09:58+00:00"
         },
         {
             "name": "tomaschochola/tooling-phpstan",
@@ -6742,27 +6742,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tomaschochola/tooling-phpstan.git",
-                "reference": "7cf6d6fb0ebbd12affae711633f725504b5c30d2"
+                "reference": "488fa47d1d6a901ae057331b39fe2ba741097c36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/7cf6d6fb0ebbd12affae711633f725504b5c30d2",
-                "reference": "7cf6d6fb0ebbd12affae711633f725504b5c30d2",
+                "url": "https://api.github.com/repos/tomaschochola/tooling-phpstan/zipball/488fa47d1d6a901ae057331b39fe2ba741097c36",
+                "reference": "488fa47d1d6a901ae057331b39fe2ba741097c36",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.5.0",
-                "phpstan/phpstan": "^2.1",
-                "phpstan/phpstan-beberlei-assert": "^2.0",
-                "phpstan/phpstan-deprecation-rules": "^2.0",
-                "phpstan/phpstan-dibi": "^2.0",
-                "phpstan/phpstan-doctrine": "^2.0",
-                "phpstan/phpstan-mockery": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpstan/phpstan-phpunit": "^2.0",
-                "phpstan/phpstan-strict-rules": "^2.0",
-                "phpstan/phpstan-symfony": "^2.0",
-                "phpstan/phpstan-webmozart-assert": "^2.0"
+                "phpstan/phpstan": "^2.3.4",
+                "phpstan/phpstan-beberlei-assert": "^2.0.2",
+                "phpstan/phpstan-deprecation-rules": "^2.0.5",
+                "phpstan/phpstan-dibi": "^2.0.0",
+                "phpstan/phpstan-doctrine": "^2.1.0",
+                "phpstan/phpstan-mockery": "^2.0.0",
+                "phpstan/phpstan-nette": "^2.0.15",
+                "phpstan/phpstan-phpunit": "^2.1.1",
+                "phpstan/phpstan-strict-rules": "^2.1.0",
+                "phpstan/phpstan-symfony": "^2.1.1",
+                "phpstan/phpstan-webmozart-assert": "^2.0.0"
             },
             "require-dev": {
                 "ext-intl": "*",
@@ -6804,7 +6804,7 @@
                     "url": "https://github.com/sponsors/tomaschochola"
                 }
             ],
-            "time": "2026-10-31T14:01:55+00:00"
+            "time": "2026-10-31T16:07:23+00:00"
         }
     ],
     "aliases": [],
