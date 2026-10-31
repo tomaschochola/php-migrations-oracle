@@ -35,11 +35,9 @@ docker compose -f .devcontainer/docker-compose.yml exec -T SERVICE bash -c 'COMM
 
 ### Services
 
-`devcontainer` — `docker.io/library/php:8.5.12-cli-trixie`  
-Runs development tools and workspace commands.
+`devcontainer` — `docker.io/library/php:8.5.12-cli-trixie` Runs development tools and workspace commands.
 
-`wiremock` — `docker.io/wiremock/wiremock:3.13.2`  
-Mocks HTTP for development and automated tests.
+`wiremock` — `docker.io/wiremock/wiremock:3.13.2` Mocks HTTP for development and automated tests.
 
 ## EditorConfig
 
@@ -90,9 +88,7 @@ max_line_length = off
     "arrowParens": "always",
     "bracketSameLine": false,
     "objectWrap": "preserve",
-    "plugins": [
-        "@prettier/plugin-xml"
-    ],
+    "plugins": ["@prettier/plugin-xml"],
     "proseWrap": "never",
     "semi": true,
     "singleAttributePerLine": true,
