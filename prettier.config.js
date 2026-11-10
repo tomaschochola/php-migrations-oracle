@@ -1,3 +1,1 @@
-import { PrettierConfigBuilder } from '@tomaschochola/tooling-prettier';
-
-export default new PrettierConfigBuilder().addXmlPlugin().toConfig();
+export { default } from '@tomaschochola/tooling-prettier';

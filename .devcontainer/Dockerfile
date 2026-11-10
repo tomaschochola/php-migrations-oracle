@@ -63,7 +63,7 @@ COPY --from=node /tmp/node.tgz /tmp/node.tgz
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get upgrade --yes --no-install-recommends \
-    && DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends ca-certificates fd-find git libaio1t64 libatomic1 libicu-dev libtool libzip-dev make openssh-client python3 sudo unzip zip \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends ca-certificates fd-find git libaio1t64 libatomic1 libicu-dev libtool libzip-dev make openssh-client python3 shellcheck sudo unzip zip \
     && tar --extract --gzip --file /tmp/node.tgz --directory /usr/local --strip-components=1 --no-same-owner --exclude='*/README.md' --exclude='*/CHANGELOG.md' --exclude='*/LICENSE' \
     && ln --symbolic /usr/bin/fdfind /usr/local/bin/fd \
     && ln --symbolic /usr/local/bin/node /usr/local/bin/nodejs \
