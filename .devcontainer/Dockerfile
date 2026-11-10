@@ -4,8 +4,8 @@ ARG TARGETARCH
 
 FROM scratch AS composer
 
-ADD --chmod=0755 --checksum=sha256:6f1b891e1d4927d62740276c540fb490e47689e19e102c49e8da849794882f8c \
-    https://getcomposer.org/download/2.11.1/composer.phar \
+ADD --chmod=0755 --checksum=sha256:dd158c0afd41d15fac89e1b4e47b5d42911fe316c3687cd5edac98319b25d028 \
+    https://getcomposer.org/download/2.11.2/composer.phar \
     /tmp/composer.phar
 
 ADD --checksum=sha256:2b2df89fb2581e669b4668b451097d4a03f4dc2d7a06df197554064494a90a31 \
