@@ -14,11 +14,6 @@
 /.temporary/
 /.tmp/
 
-# agent
-/PLAN.md
-/NOTES.md
-/ARCHITECTURE.md
-
 # environment
 /.env
 /.secrets
