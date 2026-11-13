@@ -1,9 +1,5 @@
 # AGENTS.md
 
-Edit AGENTS.md and README.md only when explicitly requested.
-
-Freely manage PLAN.md, NOTES.md, and ARCHITECTURE.md for your own work. Keep them gitignored and never commit them.
-
 ## Devcontainer
 
 The development environment is configured in `.devcontainer/`. Manage it from the repository root on the host using the Makefile targets or directly through the `devcontainer`, `docker` and `docker compose` CLIs.
