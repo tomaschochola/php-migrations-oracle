@@ -51,8 +51,6 @@ command_check:
 	command -v bash >/dev/null
 	command -v composer >/dev/null
 	command -v cut >/dev/null
-	command -v devcontainer >/dev/null
-	command -v docker >/dev/null
 	command -v env >/dev/null
 	command -v fd >/dev/null
 	command -v git >/dev/null
