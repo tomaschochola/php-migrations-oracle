@@ -45,6 +45,29 @@ check: doctor lint analyze coverage audit
 clean:
 	rm --force --recursive --one-file-system -- ./.php-cs-fixer.cache ./.phpstan.cache ./.phpunit.cache ./.phpunit.coverage ./temp ./temporary ./tmp ./.temp ./.temporary ./.tmp
 
+.PHONY: command_check
+command_check:
+	command -v basename >/dev/null
+	command -v bash >/dev/null
+	command -v composer >/dev/null
+	command -v cut >/dev/null
+	command -v devcontainer >/dev/null
+	command -v docker >/dev/null
+	command -v env >/dev/null
+	command -v fd >/dev/null
+	command -v git >/dev/null
+	command -v make >/dev/null
+	command -v mkdir >/dev/null
+	command -v npm >/dev/null
+	command -v rm >/dev/null
+	command -v rmdir >/dev/null
+	command -v sed >/dev/null
+	command -v sha256sum >/dev/null
+	command -v shellcheck >/dev/null
+	command -v sort >/dev/null
+	command -v tr >/dev/null
+	command -v xargs >/dev/null
+
 .PHONY: composer_audit
 composer_audit: ./vendor/autoload.php ./composer.json ./composer.lock
 	composer audit --no-plugins --no-scripts
@@ -96,7 +119,7 @@ dirclean:
 distclean: clean deps_clean
 
 .PHONY: doctor
-doctor: git_check npm_config_check npm_doctor npm_check composer_diagnose
+doctor: command_check git_check npm_config_check npm_doctor npm_check composer_diagnose
 
 .PHONY: down
 down:
@@ -220,7 +243,6 @@ shell: interactive_gate up
 
 .PHONY: shellcheck
 shellcheck:
-	command -v shellcheck >/dev/null
 	git ls-files -z -- '*.sh' | xargs --null --no-run-if-empty env -u SHELLCHECK_OPTS shellcheck --shell=sh --norc --severity=style --enable=all --external-sources --check-sourced --source-path=SCRIPTDIR --
 	git ls-files -z -- '*.bash' | xargs --null --no-run-if-empty env -u SHELLCHECK_OPTS shellcheck --shell=bash --norc --severity=style --enable=all --external-sources --check-sourced --source-path=SCRIPTDIR --
 
