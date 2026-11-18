@@ -23,11 +23,9 @@ never:
 	exit 1
 
 # Variables
-COMPOSE_PROJECT_NAME := $(shell printf 'dc-%s-%s' "$$(basename -- "$$(pwd -P)" | LC_ALL=C tr '[:upper:]' '[:lower:]' | LC_ALL=C tr -cs 'a-z0-9' '-' | sed -e 's/^-*//' -e 's/-*$$//' -e 's/^$$/workspace/' | cut -c 1-32 | sed 's/-*$$//')" "$$(printf '%s' "$$(pwd -P)" | sha256sum | cut -c 1-16)")
 LC_ALL := C.UTF-8
 PHP_CS_FIXER_FUTURE_MODE := 1
 
-export COMPOSE_PROJECT_NAME
 export LC_ALL
 export PHP_CS_FIXER_FUTURE_MODE
 
@@ -103,12 +101,6 @@ deps_clean: npm_clean composer_clean
 .PHONY: deps_install
 deps_install: npm_install composer_install
 
-.PHONY: devcontainer_check
-devcontainer_check:
-	devcontainer read-configuration --workspace-folder . >/dev/null
-	docker compose -f "./.devcontainer/docker-compose.yml" config --quiet
-	docker build --check --file ./.devcontainer/Dockerfile ./.devcontainer
-
 .PHONY: dirclean
 dirclean:
 	fd --hidden --exclude .git --type directory --print0 | sort --zero-terminated --reverse | xargs --null --no-run-if-empty rmdir --ignore-fail-on-non-empty --
@@ -118,10 +110,6 @@ distclean: clean deps_clean
 
 .PHONY: doctor
 doctor: command_check git_check npm_config_check npm_doctor npm_check composer_diagnose
-
-.PHONY: down
-down:
-	docker compose -f "./.devcontainer/docker-compose.yml" down --remove-orphans
 
 .PHONY: eslint_check
 eslint_check: ./node_modules/.package-lock.json ./package.json ./package-lock.json ./eslint.config.js
@@ -141,11 +129,6 @@ git_check:
 	git diff --check
 	git diff --cached --check
 	git fsck --full --strict --no-dangling --no-progress
-
-.PHONY: interactive_gate
-.SILENT: interactive_gate
-interactive_gate:
-	if test ! -t 0 || test ! -t 1; then printf '%s\n' 'interactive_gate: interactive only' >&2; exit 1; fi
 
 .PHONY: lint
 lint: eslint_check php_cs_fixer_check prettier_check shellcheck trimmer_check
@@ -187,7 +170,7 @@ npm_update: npm_config_check ./package.json ./package-lock.json npm_clean
 	npm update --ignore-scripts --install-links --include=prod --include=dev --include=peer --include=optional
 
 .PHONY: nuke
-nuke: distclean prune xfd dirclean
+nuke: distclean xfd dirclean
 
 .PHONY: php_cs_fixer_check
 php_cs_fixer_check: ./vendor/autoload.php ./composer.json ./composer.lock ./.php-cs-fixer.php
@@ -209,13 +192,6 @@ phpunit_coverage: ./vendor/autoload.php ./phpunit.xml
 phpunit_test: ./vendor/autoload.php ./phpunit.xml
 	composer exec --no-plugins --no-scripts -- phpunit --no-coverage
 
-.PHONY: port ports url urls
-.SILENT: port ports url urls
-port ports url urls:
-	printf 'Project: %s\n' "$$COMPOSE_PROJECT_NAME"
-	printf '%-20s %-12s %s\n' 'SERVICE' 'PORT' 'URL'
-	docker compose -f "./.devcontainer/docker-compose.yml" ps --format '{{$$service := .Service}}{{range .Publishers}}{{if .PublishedPort}}{{printf "%-20s %-12s http://%s:%d" $$service (printf "%d/%s" .TargetPort .Protocol) .URL .PublishedPort}}{{println}}{{end}}{{end}}' | sed '/^$$/d' | sort
-
 .PHONY: postcreate
 postcreate: deps_install
 
@@ -227,26 +203,10 @@ prettier_check: ./node_modules/.package-lock.json ./package.json ./package-lock.
 prettier_fix: ./node_modules/.package-lock.json ./package.json ./package-lock.json ./prettier.config.js
 	npm exec --no --ignore-scripts -- prettier -w .
 
-.PHONY: prune
-prune:
-	docker compose -f "./.devcontainer/docker-compose.yml" down --volumes --rmi local --remove-orphans
-
-.PHONY: rebuild
-rebuild: devcontainer_check down | $(CURDIR)/.tmp
-	TMPDIR="$(CURDIR)/.tmp" devcontainer up --workspace-folder . --build-no-cache
-
-.PHONY: shell
-shell: interactive_gate up
-	devcontainer exec --workspace-folder . /bin/bash
-
 .PHONY: shellcheck
 shellcheck:
 	fd --case-sensitive --hidden --exclude .git --type file --glob '*.sh' --exec-batch env -u SHELLCHECK_OPTS shellcheck --shell=sh --norc --severity=style --enable=all --external-sources --check-sourced --source-path=SCRIPTDIR --
 	fd --case-sensitive --hidden --exclude .git --type file --glob '*.bash' --exec-batch env -u SHELLCHECK_OPTS shellcheck --shell=bash --norc --severity=style --enable=all --external-sources --check-sourced --source-path=SCRIPTDIR --
-
-.PHONY: stop
-stop:
-	docker compose -f "./.devcontainer/docker-compose.yml" stop
 
 .PHONY: test
 test: phpunit_test
@@ -259,10 +219,6 @@ trimmer_check: ./node_modules/.package-lock.json ./package.json ./package-lock.j
 trimmer_fix: ./node_modules/.package-lock.json ./package.json ./package-lock.json
 	npm exec --no --ignore-scripts -- tooling-trimmer fix .
 
-.PHONY: up
-up: devcontainer_check | $(CURDIR)/.tmp
-	TMPDIR="$(CURDIR)/.tmp" devcontainer up --workspace-folder .
-
 .PHONY: update
 update: npm_config_check npm_update composer_update
 
@@ -271,9 +227,6 @@ xfd:
 	git clean -Xfd
 
 # Non-phony
-$(CURDIR)/.tmp:
-	mkdir --parents -- "$@"
-
 ./node_modules/.package-lock.json: ./.npmrc ./package.json ./package-lock.json
 	$(MAKE) npm_install
 

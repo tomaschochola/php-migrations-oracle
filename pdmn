@@ -1,0 +1,155 @@
+#!/bin/sh
+set -eu
+
+program_name=${0##*/}
+script_directory=${0%"${program_name}"}
+CDPATH='' cd -P -- "${script_directory:-.}" || exit 1
+workspace=${PWD}
+project=$(printf '%s' "${workspace}" | cksum)
+project=${project%% *}
+wiremock_image='docker.io/wiremock/wiremock:3.13.2@sha256:0d4ecb3e4dc8213fd7a4d37d6a78f6e6b553a6d2e15bd51b0999781282ac61b3'
+
+help() {
+    printf 'Usage: %s [command]\n       %s execute program [argument ...]\n\nCommands:\n' "${program_name}" "${program_name}"
+    printf '  %-16s  %s\n' \
+        'up' 'Start the environment; build and initialize it if new' \
+        'down' 'Stop containers; retain data' \
+        'integration' 'Run checks in temporary containers using this checkout' \
+        'recreate' 'Rebuild and initialize containers; retain data volumes' \
+        'shell' 'Open an interactive workspace shell' \
+        'execute' 'Execute a command in the workspace' \
+        'logs' 'Show recent workspace and wiremock logs' \
+        'ports' 'Show published host ports' \
+        'purge' 'Delete project containers, data and unused images' \
+        'help' 'Show this help'
+}
+
+build() {
+    podman build --file Containerfile --target workspace --label "io.pdmn.project=${project}" --tag "localhost/${project}-workspace:latest" .
+}
+
+start() {
+    podman network create --ignore --label "io.pdmn.project=${project}" "${project}-network" > /dev/null
+    podman container exists "${project}-wiremock" || podman create --name "${project}-wiremock" --label "io.pdmn.project=${project}" --network "${project}-network" --network-alias wiremock --publish 127.0.0.1::8080 --health-cmd 'curl --fail --silent --show-error http://127.0.0.1:8080/__admin/health' --health-interval 10s --health-retries 3 --health-start-period 30s --health-timeout 5s --stop-timeout 30 --volume "${workspace}/ops/local/wiremock/mappings:/home/wiremock/mappings:ro,z" "${wiremock_image}"
+    podman start "${project}-wiremock" > /dev/null
+    podman wait --condition healthy --condition unhealthy --condition exited "${project}-wiremock" > /dev/null
+    podman healthcheck run "${project}-wiremock"
+    podman container exists "${project}-workspace" || podman create --name "${project}-workspace" --label "io.pdmn.project=${project}" --network "${project}-network" --network-alias workspace --shm-size 512m --init --interactive --publish 127.0.0.1::8080 --security-opt label=disable --user 1000:1000 --userns keep-id:uid=1000,gid=1000 --env WIREMOCK_URL=http://wiremock:8080 --volume "${workspace}:/workspace" --workdir /workspace "localhost/${project}-workspace:latest" sleep infinity
+    podman start "${project}-workspace" > /dev/null
+}
+
+up() {
+    if podman container exists "${project}-workspace"; then
+        start
+    else
+        build
+        start
+        podman exec --workdir /workspace "${project}-workspace" make postcreate
+    fi
+}
+
+integration() {
+    project="${project}-$$"
+    trap purge EXIT
+    trap 'exit 130' INT
+    trap 'exit 143' TERM
+    up
+    podman exec --interactive --workdir /workspace "${project}-workspace" make check
+}
+
+down() {
+    podman stop --all --filter "label=io.pdmn.project=${project}"
+}
+
+recreate() {
+    down
+    podman rm --all --filter "label=io.pdmn.project=${project}"
+    up
+}
+
+shell() {
+    if [ ! -t 0 ] || [ ! -t 1 ]; then
+        exit 2
+    fi
+
+    exec podman exec -it --workdir /workspace "${project}-workspace" /bin/sh
+}
+
+execute() {
+    exec podman exec --interactive --workdir /workspace "${project}-workspace" "$@"
+}
+
+logs() {
+    if [ -t 0 ] && [ -t 1 ]; then
+        exec podman logs --follow --names --tail 100 "${project}-workspace" "${project}-wiremock"
+    fi
+
+    podman logs --names --tail 100 "${project}-workspace" "${project}-wiremock"
+}
+
+ports() {
+    printf '%s\n' 'workspace:'
+    podman port "${project}-workspace" 8080/tcp
+    printf '%s\n' 'wiremock:'
+    podman port "${project}-wiremock" 8080/tcp
+}
+
+purge() {
+    down
+    podman rm --all --filter "label=io.pdmn.project=${project}"
+    podman network prune --force --filter "label=io.pdmn.project=${project}"
+    podman volume prune --force --all --filter "label=io.pdmn.project=${project}"
+    podman image prune --force --all --filter "label=io.pdmn.project=${project}"
+}
+
+main() {
+    case ${1:-help} in
+        up)
+            up
+            ;;
+
+        integration)
+            integration
+            ;;
+
+        down)
+            down
+            ;;
+
+        recreate)
+            recreate
+            ;;
+
+        shell)
+            shell
+            ;;
+
+        execute)
+            shift
+            execute "$@"
+            ;;
+
+        logs)
+            logs
+            ;;
+
+        ports)
+            ports
+            ;;
+
+        purge)
+            purge
+            ;;
+
+        help)
+            help
+            ;;
+
+        *)
+            help >&2
+            exit 2
+            ;;
+    esac
+}
+
+main "$@"
